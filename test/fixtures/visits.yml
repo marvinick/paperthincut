@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: MyString
+  visited_at: 2014-09-01 20:36:49
+  load_time: 9.99
+
+two:
+  country: MyString
+  visited_at: 2014-09-01 20:36:49
+  load_time: 9.99
