@@ -17,6 +17,24 @@ class VendorsController < ApplicationController
     end
   end
 
+  def show
+    @vendor = Vendor.find(params[:id])
+  end
+
+  def edit
+    @vendor = Vendor.find(params[:id])
+  end
+
+  def update
+    @vendor = Vendor.find(params[:id])
+
+    if @vendor.update(vendor_params)
+      redirect_to vendors_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def vendor_params

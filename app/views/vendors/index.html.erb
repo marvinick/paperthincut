@@ -1,4 +1,5 @@
-<div class="vendor">
-  <% @vendors.each do |vendor| %>
-    <%= vendor.name %>
-  <% end %>
+<% @vendors.each do |vendor| %>
+  <div class="vendor">
+    <%= link_to vendor.name, vendor %>
+  </div>
+<% end %>
