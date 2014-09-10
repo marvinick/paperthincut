@@ -1,62 +1,64 @@
-<div class="row">
-  <font color="red"><h2>This site is still under contruction, but what you see here is what we are trying to do</h2></font>
-</div>
-<hr>
+<body>
+  <div class="row">
+    <font color="red"><h2>This site is still under contruction, but what you see here is what we are trying to do</h2></font>
+  </div>
+  <hr>
 
-<div class="row">
+  <div class="row">
 
-  <!-- Line Chart - Single Series -->
-  <div class="col-xs-6">
-    <h3>Visits By Day</h3>
-    <%= line_chart @visits.group_by_day(:visited_at, format: "%B %d, %Y").count, discrete: true %>
+    <!-- Line Chart - Single Series -->
+    <div class="col-xs-6">
+      <h3>Visits By Day</h3>
+      <%= line_chart @visits.group_by_day(:visited_at, format: "%B %d, %Y").count, discrete: true %>
+    </div>
+
+    <!-- Line Chart - Multiple Series -->
+    <div class="col-xs-6">
+      <h3>Visits By Country Per Day</h3>
+      <%= line_chart   Visit.pluck("country").uniq.map { |c| { name: c, data: @visits.where(country: c).group_by_day(:visited_at, format: "%B %d, %Y").count }  }, discrete: true %>
+    </div>
+
+  </div>
+  <hr>
+
+  <h3>We love infographics. They are quick view of your day to day data, which are based on your activities</h3>
+  <hr>
+  <div class="row">
+
+    <!-- Pie Chart -->
+    <div class="col-xs-6">
+      <h3>Total Visits by Country</h3>
+      <%= pie_chart @visits.group(:country).count %>
+    </div>
+
+    <!-- Geo Chart -->
+    <div class="col-xs-6">
+      <h3>Visits By Day</h3>
+      <%= geo_chart @visits.group(:country).count %>
+    </div>
+
+  </div>
+  <hr>
+  <font color="red"><h3>Stay tuned we are planning on to be up and running by Christmas 2014</h3></font>
+  <hr>
+  <!-- area chart -->
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Total Load Time By Day</h3>
+      <%= area_chart @visits.group_by_day(:visited_at).maximum(:load_time) %>
+    </div>
   </div>
 
-  <!-- Line Chart - Multiple Series -->
-  <div class="col-xs-6">
-    <h3>Visits By Country Per Day</h3>
-    <%= line_chart   Visit.pluck("country").uniq.map { |c| { name: c, data: @visits.where(country: c).group_by_day(:visited_at, format: "%B %d, %Y").count }  }, discrete: true %>
+  <div class="row">
+    <!-- Column Chart -->
+    <div class="col-xs-6">
+      <h3>Total Visits Per Country</h3>
+      <%= column_chart @visits.group(:country).count %>
+    </div>
+    <!-- Bar Chart -->
+    <div class="col-xs-6">
+      <h3>Total Visits Per Country</h3>
+      <%= bar_chart @visits.group(:country).count %>
+    </div>
   </div>
-
-</div>
-<hr>
-
-<h3>We love infographics. They are quick view of your day to day data, which are based on your activities</h3>
-<hr>
-<div class="row">
-
-  <!-- Pie Chart -->
-  <div class="col-xs-6">
-    <h3>Total Visits by Country</h3>
-    <%= pie_chart @visits.group(:country).count %>
-  </div>
-
-  <!-- Geo Chart -->
-  <div class="col-xs-6">
-    <h3>Visits By Day</h3>
-    <%= geo_chart @visits.group(:country).count %>
-  </div>
-
-</div>
-<hr>
-<font color="red"><h3>Stay tuned we are planning on to be up and running by Christmas 2014</h3></font>
-<hr>
-<!-- area chart -->
-<div class="row">
-  <div class="col-xs-12">
-    <h3>Total Load Time By Day</h3>
-    <%= area_chart @visits.group_by_day(:visited_at).maximum(:load_time) %>
-  </div>
-</div>
-
-<div class="row">
-  <!-- Column Chart -->
-  <div class="col-xs-6">
-    <h3>Total Visits Per Country</h3>
-    <%= column_chart @visits.group(:country).count %>
-  </div>
-  <!-- Bar Chart -->
-  <div class="col-xs-6">
-    <h3>Total Visits Per Country</h3>
-    <%= bar_chart @visits.group(:country).count %>
-  </div>
-</div>
+</body>

@@ -1,5 +1,5 @@
 <div class="members">
-  <%= form_for(@member) do |f| %>
+  <%= form_for @member do |f| %>
   <% if @member.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@member.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -18,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_area :email, rows: 12, columns: 12 %>
+    <%= f.text_field :email %>
   </div>
   <div class="field">
     <%= f.label :password %>

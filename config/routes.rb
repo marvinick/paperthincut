@@ -2,6 +2,7 @@ Paperthincut::Application.routes.draw do
   resources :posts
   root to: "homes#show"
   resources :vendors
+  resources :members
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

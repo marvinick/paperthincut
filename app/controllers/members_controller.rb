@@ -7,6 +7,10 @@ class MembersController < ApplicationController
     @member = Member.new
   end
 
+  def show
+    @member = Member.find(params[:id])
+  end
+
   def create
     @member = Member.new(member_params)
 
@@ -36,3 +40,4 @@ class MembersController < ApplicationController
   def member_params
     params.require(:member).permit(:name, :email, :password)
   end
+end
