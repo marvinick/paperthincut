@@ -1,3 +1,5 @@
 <div class="members">
-
+  <% @members.each do |m| %>
+    <%= link_to member.name, member %>
+  <% end %>
 </div>
