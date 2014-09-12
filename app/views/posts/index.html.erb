@@ -1,5 +1,12 @@
 <div class="post">
-  <% @posts.each do |post| %>
-    <%= link_to post.title, post %>
-  <% end %>
+  <ul>
+    <% @posts.each do |post| %>
+    <div class="col-md-3">
+      <%= link_to post.title, post %>
+    </div>
+    <% end %>
+    <hr>
+    <%= link_to "New Post", new_post_path %>
+  </ul>
 </div>
+
