@@ -4,6 +4,7 @@ Paperthincut::Application.routes.draw do
   resources :vendors
   resources :members
 
+  get '/register', to: 'members#new'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'

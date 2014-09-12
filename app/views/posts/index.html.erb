@@ -1,1 +1,5 @@
-<h2>It's about getting ready, before the show started</h2>
+<div class="post">
+  <% @posts.each do |post| %>
+    <%= link_to post.title, post %>
+  <% end %>
+</div>
