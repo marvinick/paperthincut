@@ -3,6 +3,7 @@ Paperthincut::Application.routes.draw do
   root to: "homes#show"
   resources :vendors
   resources :members
+  resources :products
 
   get '/register', to: 'members#new'
   get '/login', to: 'sessions#new'
