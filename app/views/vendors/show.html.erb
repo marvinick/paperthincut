@@ -3,6 +3,8 @@
 
 <ul>
   <% @vendor.products.each do |product| %>
-    <%= link_to product.name, product_path(@product) %>
+  <ul>
+    <li><%= product.name %> = <%= product.description %></li>
+  </ul>
   <% end %>
 </ul>
