@@ -1,4 +1,8 @@
-<div class="vendor">
-  <%= @vendor.name %>
-  <%= @vendor.email %>
-</div>
+
+<h3><%= link_to @vendor.name %></h3>
+
+<ul>
+  <% @vendor.products.each do |product| %>
+    <%= link_to product.name, product_path(@product) %>
+  <% end %>
+</ul>

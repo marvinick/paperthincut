@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PaperThinCut - infographics at work</title>
+  <title>PaperThinCut - charts at work</title>
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -21,6 +21,9 @@
               <%= link_to 'Post', new_post_path %>
             <li>
               <%= link_to "Vendor", new_vendor_path %>
+            </li>
+            <li>
+              <%= link_to "Product", new_product_path %>
             </li>
           </ul>
         </div>
