@@ -1,7 +1,7 @@
 <h3>Select vendor:</h3>
 <% @vendors.each do |vendor| %>
   <div class="vendor">
-    <%= link_to vendor.name, vendor %>
+    <%= link_to vendor.name, vendor_path(vendor) %>
   </div>
 <% end %>
 
