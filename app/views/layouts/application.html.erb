@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 </head>
 <body>
+  <div id="sticky">
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <ul class="pull-left">
+            <li><%= link_to "PaperThinCut", root_path %></li>
+            <li>
+              <%= link_to 'Post', new_post_path %>
+            <li>
+              <%= link_to "Vendor", new_vendor_path %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <%= yield %>
 

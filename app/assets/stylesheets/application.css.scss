@@ -12,11 +12,14 @@
  *= require_tree .
  */
 
+ @import "bootstrap";
+ @import "bootstrap-responsive";
+
  body {
   padding-left: 30px;
   background-color: #525252;
   padding-right: 30px;
-  padding-top: 30px
+  padding-top: 65px
  }
 
  .mail {
@@ -37,3 +40,33 @@
  .span3 well {
   background-color: #525252;
  }
+
+ #sticky {
+  margin: auto;
+  position: fixed;
+  z-index:1000;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  /* Adds to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 15px 0px #000000;
+  -moz-box-shadow: 0px 0px 15px 0px #000000;
+  box-shadow: 0px 0px 15px 0px #000000;
+  /* Adds the transparent background */
+  background-color: #003366;
+  opacity: 0.9;
+}
+
+#sticky li {
+  display: inline;
+  padding-right: 23px;
+}
+
+#sticky a {
+  font-size: 14px;
+  color: white;
+  font-family: Comic Sans MS, serif;
+}
