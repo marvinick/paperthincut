@@ -1,4 +1,6 @@
 Paperthincut::Application.routes.draw do
+  resources :line_items
+
   resources :posts
   root to: "homes#show"
   resources :vendors
