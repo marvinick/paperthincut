@@ -1,10 +1,12 @@
-
-<h3><%= link_to @vendor.name %></h3>
-
-<ul>
-  <% @vendor.products.each do |product| %>
+<div class="vendor">
+  <h3><%= @vendor.name %></h3>
   <ul>
-    <li><%= product.name %> = <%= product.description %></li>
+    <% @vendor.products.each do |product| %>
+    <ul>
+      <li><%= product.name %> = <%= product.description %></li>
+       <%= number_field_tag 'quantity', nil, in: 1...10, :class=>"input-xlarge" %>
+       <%= button_tag 'Add to Cart', class: "btn btn-primary" %>
+    </ul>
+    <% end %>
   </ul>
-  <% end %>
-</ul>
+</div>

@@ -22,7 +22,7 @@
   </div>
   <br/>
   <center><div class="actions"></center>
-    <%= f.submit %>
+    <%= f.submit @vendor.new_record? ? "Add Vendor" : "Update", class: 'btn btn-success btn-md'%>
   </div>
   <% end %>
 </div>
