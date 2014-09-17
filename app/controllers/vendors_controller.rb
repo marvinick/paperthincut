@@ -19,6 +19,7 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def edit
@@ -45,6 +46,6 @@ class VendorsController < ApplicationController
   private
 
   def vendor_params
-    params.require(:vendor).permit(:name, :email)
+    params.require(:vendor).permit(:name, :email, product_ids: [])
   end
 end

@@ -1,6 +1,5 @@
 class HomesController < ApplicationController
   def show
-    @visits = Visit.all
-    @vendor = Vendor.new
+    @visits = Visit.all? { |e| }
   end
 end

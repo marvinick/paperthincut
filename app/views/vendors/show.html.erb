@@ -4,8 +4,13 @@
     <% @vendor.products.each do |product| %>
     <ul>
       <li><%= product.name %> = <%= product.description %></li>
-       <%= number_field_tag 'quantity', nil, in: 1...10, :class=>"input-xlarge" %>
-       <%= button_tag 'Add to Cart', class: "btn btn-primary" %>
+      <%= form_for @product do |f| %>
+        <div class="field">
+          <%= f.label :quantity%>
+          <%= f.text_field :quantity%>
+        </div>
+        <%= button_tag 'Add to Cart', class: "btn btn-primary" %>
+       <% end %>
     </ul>
     <% end %>
   </ul>
