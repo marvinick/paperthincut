@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @vendors = Vendor.all
     @product = Product.new
   end
 
