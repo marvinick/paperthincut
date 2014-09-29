@@ -3,7 +3,7 @@
   <ul>
     <% @vendor.products.each do |product| %>
     <ul>
-      <li><%= product.name %> = <%= product.description %></li>
+      <li><%= product.name %> : <%= product.description %></li>
       <%= form_for @product do |f| %>
         <div class="field">
           <%= f.label :quantity%>
