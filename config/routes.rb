@@ -6,6 +6,7 @@ Paperthincut::Application.routes.draw do
   resources :vendors
   resources :products
   resources :members
+  resources :orders
 
   get '/register', to: 'members#new'
   get '/login', to: 'sessions#new'
