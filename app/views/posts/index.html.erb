@@ -1,6 +1,8 @@
 <div class="main">
-  <h4>Posts</h4>
+  <h4>Messages</h4>
   <% @posts.each do |post| %>
     <%= post.title %>
   <% end %>
+  <hr>
+  <%= link_to "New Message", new_post_path %>
 </div>
