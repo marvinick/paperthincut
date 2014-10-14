@@ -1,7 +1,12 @@
 <div class="main">
   <h4>Messages</h4>
   <% @posts.each do |post| %>
-    <%= post.title %>
+  <ul>
+    <li><%= link_to post.title, post %></li>
+    <ul>
+      <li><%= post.content %></li>
+    </ul>
+  </ul>
   <% end %>
   <hr>
   <%= link_to "New Message", new_post_path %>
