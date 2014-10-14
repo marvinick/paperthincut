@@ -1,13 +1,6 @@
-<div class="post">
-  <ul>
-    <% @posts.each do |post| %>
-    <div class="col-md-3">
-      <%= link_to post.title, post %>
-    </div>
-    <% end %>
-    <hr>
-  </ul>
-  <hr>
-  <%= link_to "Post Here", new_post_path, class:"btn btn-primary btn-sm" %>
+<div class="main">
+  <h4>Posts</h4>
+  <% @posts.each do |post| %>
+    <%= post.title %>
+  <% end %>
 </div>
-
