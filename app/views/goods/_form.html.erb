@@ -1,14 +1,16 @@
-
-<%= form_for @good do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<br/>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<br/>
-<br/>
-<%= f.label :price %>
-<%= f.text_field :price %>
-<hr>
-<%= f.submit %>
-<% end %>
+<div class="main">
+  <%= form_for @good do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+  <br/>
+  <br/>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br/>
+  <br/>
+  <%= f.label :price %>
+  <%= f.text_area :price %>
+  <hr>
+  <%= f.submit(@good.new_record? ? "Add Product" : "Update Product") %>
+  <% end %>
+</div>

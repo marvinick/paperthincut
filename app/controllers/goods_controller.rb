@@ -19,12 +19,20 @@ class GoodsController < ApplicationController
   end
 
   def edit
+    @good = Good.find(params[:id])
   end
 
   def update
+    @good = Good.find(params[:id])
+    if @good.update(goods_params)
+      redirect_to good_path
+    else
+      render :edit
+    end
   end
 
   def show
+    @good = Good.find(params[:id])
   end
 
   def destroy
