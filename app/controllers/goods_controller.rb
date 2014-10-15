@@ -1,7 +1,6 @@
 class GoodsController < ApplicationController
-
   def index
-    @goods = Good.all
+    @goods = Good.order(:name)
   end
 
   def new
@@ -41,6 +40,6 @@ class GoodsController < ApplicationController
   private
 
   def goods_params
-    params.require(:good).permit(:name, :description, :price, :amount)
+    params.require(:good).permit(:name, :description, :price, :amount, :cost)
   end
 end

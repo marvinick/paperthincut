@@ -1,3 +1,9 @@
-<%= @good.name %>
-<%= @good.description %>
-<%= link_to "Edit Product", edit_good_path %>
+<div class="goods">
+  <ul>
+    <li> Name : <%= @good.name %></li>
+    <li> Info : <%= @good.description %></li>
+    <li> Price : <%= @good.price %></li>
+    <br/>
+    <%= link_to "Edit", edit_good_path %>
+  </ul>
+</div>
