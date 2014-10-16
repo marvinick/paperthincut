@@ -35,6 +35,12 @@ class GoodsController < ApplicationController
   end
 
   def destroy
+    @good = Good.find(params[:id])
+    @good.destroy
+    respond_to do |format|
+      format.html { redirect_to goods_url }
+      format.json { head :no_content }
+    end
   end
 
   private

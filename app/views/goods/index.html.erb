@@ -1,8 +1,6 @@
 <div class="main">
   <% @goods.each do |good| %>
-  <ul>
     <li><%= link_to good.name, good %></li>
-  </ul>
   <% end %>
   <hr>
   <%= link_to "Add Product", new_good_path %>
