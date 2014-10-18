@@ -11,6 +11,10 @@
   <%= f.label :price %>
   <%= f.text_area :price %>
   <hr>
+  <%= f.label "Distributors" %>
+  <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :name do |cb| %>
+    <% cb.label(class: "checkbox inline") {cb.check_box(class: "checkbox") + cb.text} %>
+    <% end %>
   <%= f.submit(@good.new_record? ? "Add Product" : "Update Product") %>
   <% end %>
 </div>
