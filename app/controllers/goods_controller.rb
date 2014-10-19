@@ -22,6 +22,7 @@ class GoodsController < ApplicationController
   def edit; end
 
   def update
+
     if @good.update(goods_params)
       redirect_to good_path
     else
@@ -46,6 +47,6 @@ class GoodsController < ApplicationController
   end
 
   def goods_params
-    params.require(:good).permit(:name, :description, :price, :amount, :cost)
+    params.require(:good).permit(:name, :description, :price, :amount, :cost, distributor_ids: [])
   end
 end

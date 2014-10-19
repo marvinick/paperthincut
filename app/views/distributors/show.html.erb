@@ -1,0 +1,14 @@
+
+<div class="main">
+  <li><%= @distributor.name %></li>
+  <ul>
+    <li><%= @distributor.description %></li>
+  <ul>
+</div>
+
+<ul>
+  <% @distributor.goods.each do |good| %>
+    <%= render good.distributors %>
+    <%= link_to @good.name, good_path(@good) %>
+  <% end %>
+</ul>

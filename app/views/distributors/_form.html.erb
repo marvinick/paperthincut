@@ -1,0 +1,15 @@
+<div class="main">
+  <%= form_for @distributor do |f| %>
+    <div class="control-group">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="control-group">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <div class="control-group">
+      <%= f.submit(@distributor.new_record? ? "Add Distributor" : "Update") %>
+      </div
+  <% end %>
+</div>

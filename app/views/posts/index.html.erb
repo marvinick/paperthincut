@@ -3,10 +3,6 @@
   <% @posts.each do |post| %>
   <ul>
     <li><%= link_to post.title, post %></li>
-    <ul>
-      <li><%= post.content %></li>
-    </ul>
-
   </ul>
   <% end %>
   <hr>
