@@ -1,14 +1,15 @@
 
-<div class="main">
-  <li><%= @distributor.name %></li>
-  <ul>
-    <li><%= @distributor.description %></li>
-  <ul>
+<div class="span3 well">
+  <h3><li><%= @distributor.name %></li></h3>
+  <li><%= @distributor.description %></li>
+  <br/>
+  <%= link_to "Edit", edit_distributor_path %>
+  <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
-<ul>
+<div class="span6 well">
   <% @distributor.goods.each do |good| %>
+    <h4><li><%= link_to good.name, good_path(good) %></li></h4>
     <%= render good.distributors %>
-    <%= link_to @good.name, good_path(@good) %>
   <% end %>
-</ul>
+</div>

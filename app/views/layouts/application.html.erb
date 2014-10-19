@@ -13,23 +13,19 @@
   <body>
     <div id="sticky">
       <div class="nav">
-        <div class="container">
-          <ul class="row">
-            <li><%= link_to "PaperThin", root_path, :class => 'brand' %></li>
-            <li>
-              <%= link_to (new_good_path) do %>
-                <i class="icon-plus"></i>
-                Product
-              <% end %>
-            </li>
-            <li>
-              <%= link_to(new_distributor_path) do %>
-                <i class="icon-plus"></i>
-                Distributor
-              <% end %>
-            </li>
-          </ul>
-        </div>
+        <ul class="pull-left">
+          <strong><li><%= link_to "PaperThin", root_path %></li></strong>
+          <li>
+            <%= link_to (goods_path) do %>
+              Products
+            <% end %>
+          </li>
+          <li>
+            <%= link_to (distributors_path) do %>
+              Distributors
+            <% end %>
+          </li>
+        </ul>
       </div>
     </div>
     <%= yield %>

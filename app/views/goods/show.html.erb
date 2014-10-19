@@ -1,11 +1,10 @@
-<div class="goods">
+<div class="span5 well">
   <ul>
-    <li> Name : <%= @good.name %></li>
-    <li> Info : <%= @good.description %></li>
+    <h4><li><%= @good.name %></li></h4>
+    <li><%= @good.description %></li>
     <li> Price : <%= @good.price %></li>
     <br/>
     <%= link_to "Edit", edit_good_path %>
     <%= link_to 'Delete', good_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </ul>
   </ul>
 </div>

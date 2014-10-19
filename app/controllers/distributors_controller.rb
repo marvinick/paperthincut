@@ -30,10 +30,14 @@ class DistributorsController < ApplicationController
   end
 
   def show
-    @good = Good.find(params[:id])
   end
 
   def destroy
+    @good.destroy
+    respond_to do |format|
+      format.html { redirect_to distributors_url }
+      format.json { head :no_content }
+    end
   end
 
   private

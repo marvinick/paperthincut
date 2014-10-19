@@ -1,4 +1,6 @@
-<div class="well">
+<div class="span5 well">
+  <h3>Products</h3>
+  <br/>
   <% @goods.each do |good| %>
     <li><%= link_to good.name, good %></li>
   <% end %>
