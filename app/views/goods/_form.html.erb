@@ -1,15 +1,19 @@
 <div class="main">
   <%= form_for @good do |f| %>
-  <%= f.label :name %>
-  <%= f.text_area :name %>
+  <div class="control-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
   <br/>
+  <div class="control-group>">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
   <br/>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <br/>
-  <br/>
-  <%= f.label :price %>
-  <%= f.text_area :price %>
+  <div class="control-group>">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
   <hr>
   <%= f.label "Distributors" %>
   <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :name do |cb| %>

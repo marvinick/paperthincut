@@ -64,3 +64,36 @@
   font-family: Comic Sans MS, serif;
 }
 
+.container {
+  margin-left: 200px;
+  position: relative;
+}
+
+.navbar .nav > li > a.brand {
+  padding-left: 0px;
+}
+
+.quiet {
+  color: #ababab;
+}
+
+div.nav_item {
+  margin-left: 25px;
+  float: left;
+}
+
+.label  {
+  a, a:hover, a:focus {
+    color: #fff;
+    text-decoration: overline;
+  }
+}
+
+div.comment_votes {
+  padding: 10px;
+}
+
+body {
+  background-color: rgb(152,251,152);
+}
+
