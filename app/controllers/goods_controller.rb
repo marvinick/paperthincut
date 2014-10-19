@@ -1,4 +1,6 @@
 class GoodsController < ApplicationController
+  before_action :set_good, only: [:edit, :update, :show, :destroy]
+
   def index
     @goods = Good.order(:name)
   end
@@ -17,12 +19,9 @@ class GoodsController < ApplicationController
     end
   end
 
-  def edit
-    @good = Good.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @good = Good.find(params[:id])
     if @good.update(goods_params)
       redirect_to good_path
     else
@@ -30,12 +29,9 @@ class GoodsController < ApplicationController
     end
   end
 
-  def show
-    @good = Good.find(params[:id])
-  end
+  def show; end
 
   def destroy
-    @good = Good.find(params[:id])
     @good.destroy
     respond_to do |format|
       format.html { redirect_to goods_url }
@@ -44,6 +40,10 @@ class GoodsController < ApplicationController
   end
 
   private
+
+  def set_good
+    @good = Good.find(params[:id])
+  end
 
   def goods_params
     params.require(:good).permit(:name, :description, :price, :amount, :cost)
