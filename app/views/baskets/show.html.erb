@@ -9,4 +9,6 @@
      <li><%= item.amount %> &times; <%= item.good.name %></li>
     <% end %>
   </ul>
+  <br/>
+  <%= button_to "Empty Basket", @basket, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
