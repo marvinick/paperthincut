@@ -1,10 +1,12 @@
-<% if notice %>
- <p id="notice"><%= notice %></p>
-<% end %>
-
-<h4>Order Basket</h4>
-<ul>
-  <% @basket.items.each do |item| %>
-   <li><%= item.good.name %></li>
+<div class="span5 well">
+  <% if notice %>
+   <p id="notice"><%= notice %></p>
   <% end %>
-</ul>
+
+  <h4>Order Basket</h4>
+  <ul>
+    <% @basket.items.each do |item| %>
+     <li><%= item.amount %> &times; <%= item.good.name %></li>
+    <% end %>
+  </ul>
+</div>

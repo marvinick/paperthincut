@@ -19,11 +19,11 @@ class ItemsController < ApplicationController
 
   def create
     good = Good.find(params[:good_id])
-    @item = @basket.items.build(good: good)
+    @item = @basket.add_good(good.id)
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item.basket, notice: 'Item was successfully created.' }
+        format.html { redirect_to @item.basket, notice: 'Product has been added' }
         format.json { render action: 'show', status: :created, location: @item }
       else
         format.html { render action: 'new' }
