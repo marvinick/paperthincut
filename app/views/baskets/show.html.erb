@@ -1,0 +1,10 @@
+<% if notice %>
+ <p id="notice"><%= notice %></p>
+<% end %>
+
+<h4>Order Basket</h4>
+<ul>
+  <% @basket.items.each do |item| %>
+   <li><%= item.good.name %></li>
+  <% end %>
+</ul>
