@@ -1,4 +1,7 @@
-<div class="main">
+<div class="span5 well">
+  <h4><%= @post.title %></h4>
   <%= @post.content %>
+  <br/>
+  <%= link_to 'Edit', edit_post_path(@post) %>
   <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

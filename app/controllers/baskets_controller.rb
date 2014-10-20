@@ -1,28 +1,18 @@
 class BasketsController < ApplicationController
   before_action :set_basket, only: [:show, :edit, :update, :destroy]
 
-  # GET /baskets
-  # GET /baskets.json
   def index
     @baskets = Basket.all
   end
 
-  # GET /baskets/1
-  # GET /baskets/1.json
-  def show
-  end
+  def show; end
 
-  # GET /baskets/new
   def new
     @basket = Basket.new
   end
 
-  # GET /baskets/1/edit
-  def edit
-  end
+  def edit; end
 
-  # POST /baskets
-  # POST /baskets.json
   def create
     @basket = Basket.new(basket_params)
 
@@ -37,8 +27,6 @@ class BasketsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /baskets/1
-  # PATCH/PUT /baskets/1.json
   def update
     respond_to do |format|
       if @basket.update(basket_params)
@@ -51,8 +39,6 @@ class BasketsController < ApplicationController
     end
   end
 
-  # DELETE /baskets/1
-  # DELETE /baskets/1.json
   def destroy
     @basket.destroy
     respond_to do |format|
@@ -67,7 +53,6 @@ class BasketsController < ApplicationController
       @basket = Basket.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def basket_params
       params[:basket]
     end
