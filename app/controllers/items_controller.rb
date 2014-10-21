@@ -58,6 +58,6 @@ class ItemsController < ApplicationController
     end
 
     def item_params
-      params.require(:item).permit(:good_id, :basket_id)
+      params.require(:item).permit(:good_id)
     end
 end

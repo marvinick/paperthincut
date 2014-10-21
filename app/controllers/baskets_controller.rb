@@ -1,5 +1,6 @@
 class BasketsController < ApplicationController
   before_action :set_basket, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_basket
 
   def index
     @baskets = Basket.all
@@ -56,5 +57,10 @@ class BasketsController < ApplicationController
 
     def basket_params
       params[:basket]
+    end
+
+    def invalid_basket
+      logger.error "Attempt to access invalid basket #{params[:id]}"
+      redirect_to root_path, notice: 'Invalid basket'
     end
 end
