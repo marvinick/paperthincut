@@ -12,3 +12,10 @@
   <br/>
   <%= button_to "Empty Basket", @basket, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
+
+<div class="span5 well">
+  <%= form_for(@basket) do |f| %>
+    <%= f.label :info %>
+    <%= f.text_area :info %>
+  <% end %>
+</div>

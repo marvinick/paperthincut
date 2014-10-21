@@ -10,7 +10,7 @@
 <div class="span6 well">
   <% @distributor.goods.each do |good| %>
     <h4><li><%= link_to good.name, good_path(good) %></li></h4>
-    <%= button_to "Add to Basket", items_path(good_id: good) %>
+    <%= button_to "Order", items_path(good_id: good) %>
     <%= render good.distributors %>
   <% end %>
 </div>
