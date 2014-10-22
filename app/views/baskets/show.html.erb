@@ -1,8 +1,8 @@
-<div class="span5 well">
-  <% if notice %>
-   <p id="notice"><%= notice %></p>
-  <% end %>
+<% if notice %>
+ <p id="notice"><%= notice %></p>
+<% end %>
 
+<div class="span5 well">
   <h4>Order Basket</h4>
   <ul>
     <% @basket.items.each do |item| %>
@@ -11,14 +11,8 @@
   </ul>
   <br/>
   <%= button_to "Empty Basket", @basket, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= button_to "Checkout", new_request_path, method: :get %>
 </div>
 
-<div class="span5 well">
-  <%= form_for(@basket) do |f| %>
-    <%= f.label :info %>
-    <%= f.text_area :info %>
-  <hr>
-  <%= f.submit %>
-  <% end %>
-</div>
+
 
