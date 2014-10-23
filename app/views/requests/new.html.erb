@@ -1,0 +1,11 @@
+<div class="span5 well">
+  <%= form_for @request do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br/>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <br/>
+    <%= f.submit %>
+  <% end %>
+</div>
