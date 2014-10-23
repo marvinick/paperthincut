@@ -7,4 +7,5 @@ Paperthincut::Application.routes.draw do
   resources :posts
   resources :goods
   resources :distributors
+  resources :requests
 end
