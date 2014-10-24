@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
 
   def index
+    @requests = Request.all
   end
 
   def new
@@ -8,16 +9,17 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @create = Request.new(request_params)
+    @request = Request.new(request_params)
 
     if @request.save
-      redirect_to distributors_path
+      redirect_to requests_path
     else
       render :new
     end
   end
 
   def show
+    @request = Request.find(params[:id])
   end
 
   def edit
