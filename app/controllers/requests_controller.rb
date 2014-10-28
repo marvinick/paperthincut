@@ -20,6 +20,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
+        AppMailer.request_deliver(@request).deliver
         Basket.destroy(session[:basket_id])
         session[:basket_id] = nil
 
