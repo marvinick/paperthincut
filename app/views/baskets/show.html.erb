@@ -7,6 +7,8 @@
   <ul>
     <% @basket.items.each do |item| %>
      <li><%= item.amount %> &times; <%= item.good.name %></li>
+     <br/>
+     <li><%= link_to 'select more', :back %></li>
     <% end %>
   </ul>
   <br/>
