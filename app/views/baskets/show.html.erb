@@ -7,9 +7,9 @@
   <ul>
     <% @basket.items.each do |item| %>
      <li><%= item.amount %> &times; <%= item.good.name %></li>
-     <br/>
-     <li><%= link_to 'select more', :back %></li>
     <% end %>
+    <br/>
+    <li><%= link_to 'select more', :back %></li>
   </ul>
   <br/>
   <%= button_to "Empty Basket", @basket, method: :delete, data: { confirm: 'Are you sure?' } %>
