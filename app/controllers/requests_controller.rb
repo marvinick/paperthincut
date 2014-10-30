@@ -17,13 +17,13 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(request_params)
+    @request.add_items_from_basket(@basket)
 
     respond_to do |format|
       if @request.save
-        AppMailer.request_deliver(@request).deliver
         Basket.destroy(session[:basket_id])
         session[:basket_id] = nil
-
+        AppMailer.request_deliver(@request).deliver
         format.html { redirect_to distributors_path, notice: "You've placed the order" }
       else
         format.html { render action: 'new' }
