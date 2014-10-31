@@ -7,6 +7,7 @@
   <hr>
   <%= link_to "Add Product", new_good_path %>
 </div>
-<div class="span6 well">
-  <%= column_chart Good.group(:name).count %>
+<div class="span5 well">
+  <%= link_to "See Orders", requests_path %>
 </div>
+

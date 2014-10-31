@@ -1,8 +1,10 @@
+<div class="span8 well">
+  <%= column_chart Request.group(:email).count %>
+</div>
 <div class="span5 well">
   <% @requests.each do  |request| %>
-    <%= link_to request.name, request %>
+  <ul>
+    <li><%= link_to request.name, request %></li>
+  </ul>
   <% end %>
-</div>
-<div class="span8 well">
-  <%= column_chart Request.group(:name).count %>
 </div>
