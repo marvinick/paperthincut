@@ -19,7 +19,9 @@
     <% end %>
   </tbody>
 </table>
-
+<div class="span8 well">
+  <%= column_chart Item.group(:good_id).count %>
+</div>
 <br>
 
 <%= link_to 'New Basket', new_basket_path %>

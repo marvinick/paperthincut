@@ -3,6 +3,6 @@
     <%= link_to request.name, request %>
   <% end %>
 </div>
-<div class="span5 well">
-  <%= pie_chart Request.group(:name).count %>
+<div class="span8 well">
+  <%= column_chart Request.group(:name).count %>
 </div>
