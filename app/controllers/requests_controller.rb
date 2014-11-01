@@ -40,6 +40,12 @@ class RequestsController < ApplicationController
   end
 
   def destroy
+    @request = Request.find(params[:id])
+    @request.destroy
+    respond_to do |format|
+      format.html { redirect_to requests_url }
+      format.json { head :no_content }
+    end
   end
 
   private

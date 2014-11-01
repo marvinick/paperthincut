@@ -2,6 +2,7 @@
   <%= @request.name %>
   <br/>
   <%= @request.email %>
+  <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
 <div class="span8 well">
