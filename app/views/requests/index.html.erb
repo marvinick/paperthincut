@@ -1,5 +1,5 @@
 <div class="span8 well">
-  <%= column_chart Request.group(:email).count %>
+  <%= column_chart Request.group(:item_id).count %>
 </div>
 <div class="span5 well">
   <% @requests.each do  |request| %>
