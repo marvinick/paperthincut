@@ -2,6 +2,9 @@
   <%= @request.name %>
   <br/>
   <%= @request.email %>
+  <br/>
+  <%= render @request.items %>
+  <br/>
   <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
