@@ -1,9 +1,9 @@
 <div class="span6 well">
-  <%= @request.name %>
+  <h4><%= @request.name %></h4>
   <br/>
-  <%= @request.email %>
+  <h5><%= @request.email %><h5>
   <br/>
-  <%= render @request.items %>
+  <font color="red"><%= render @request.items %></font>
   <br/>
   <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

@@ -3,7 +3,7 @@ class RequestsController < ApplicationController
   before_action :set_basket, only: [:new, :create]
 
   def index
-    @requests = Request.all
+    @requests = Request.order(:name).reverse
   end
 
   def new
