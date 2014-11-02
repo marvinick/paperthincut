@@ -5,6 +5,7 @@
   <% @requests.each do  |request| %>
   <ul>
     <li><%= link_to request.name, request %></li>
+    <li><%= request.created_at %></li>
   </ul>
   <% end %>
 </div>
