@@ -3,7 +3,7 @@ class Good < ActiveRecord::Base
   has_many :distributors, through: :good_distributors
 
   validates :name, presence: true
-
+  validates :unit, presence: true
   has_many :items
   before_destroy :ensure_not_referenced_by_item
 

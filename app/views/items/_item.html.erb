@@ -1,1 +1,5 @@
-<%= sprintf("%2d x %s", item.amount, truncate(item.good.name, length: 50)) %>
+<tr>
+  <td><%= item.amount %><td>
+  <td><%= item.good.unit %></td>
+  <td><%= item.good.name %></td>
+</tr>
