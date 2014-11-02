@@ -6,7 +6,7 @@
   <h4>Order Cart</h4>
   <ul>
     <% @basket.items.each do |item| %>
-     <li><%= item.amount %> <%= item.good.unit %> <%= item.good.name %></li>
+     <li><%= item.amount %> <%= item.good.unit %> of <%= item.good.name %></li>
     <% end %>
     <br/>
     <li><%= link_to 'select more', :back %></li>
