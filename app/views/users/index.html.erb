@@ -1,0 +1,11 @@
+<div class="span5 well">
+  <% @users.each do |user| %>
+  <ul>
+    <li><%= link_to user.username, user %></li>
+    <li><%= user.email %></li>
+  <ul>
+  <% end %>
+</div>
+<div class="span3 well">
+  <h4><%= link_to "Add new user", new_user_path %></h4>
+</div>

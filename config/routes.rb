@@ -5,5 +5,6 @@ Paperthincut::Application.routes.draw do
   resources :goods
   resources :distributors
   resources :requests
+  resources :users
   root to: "requests#index"
 end
