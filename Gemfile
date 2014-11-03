@@ -23,14 +23,22 @@ gem 'active_median', '~> 0.1.0'
 gem 'hightop'
 gem 'taps'
 gem 'lunchy'
+gem 'fabrication'
+gem 'faker'
+gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'unicorn'
 
 group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'bcrypt-ruby', '~> 3.1.2'
+group :development, :test do
+  gem 'rspec-rails' , '~> 2.0'
+end
 
-gem 'unicorn'
+group :test do
+  gem 'shoulda-matchers'
+end
 
 group :development do
   gem 'letter_opener'
