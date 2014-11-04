@@ -35,7 +35,19 @@ GEM
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     builder (3.1.4)
+    capybara (2.0.3)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 1.0.0)
+    capybara-email (2.0.3)
+      capybara (~> 2.0.0)
+      mail
     chartkick (1.3.2)
+    childprocess (0.5.5)
+      ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -44,6 +56,9 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     commonjs (0.2.7)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
+    database_cleaner (1.3.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -52,6 +67,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.6)
     groupdate (2.1.1)
       activerecord (>= 3.0.0)
     hashie (3.3.1)
@@ -73,7 +89,7 @@ GEM
       addressable
       faraday
       multi_json
-    launchy (2.4.2)
+    launchy (2.4.3)
       addressable (~> 2.3)
     less (2.5.1)
       commonjs (~> 0.2.7)
@@ -88,9 +104,12 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     minitest (4.7.5)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -142,6 +161,8 @@ GEM
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
       rspec-mocks (~> 2.99.0)
+    rubyzip (1.1.6)
+    safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -151,6 +172,11 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    selenium-webdriver (2.43.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     sequel (3.20.0)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
@@ -194,6 +220,13 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    vcr (2.9.3)
+    webmock (1.20.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+    websocket (1.2.1)
+    xpath (1.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -202,8 +235,11 @@ DEPENDENCIES
   active_median (~> 0.1.0)
   bcrypt-ruby (~> 3.1.2)
   bootstrap-sass (~> 2.3.2.0)
+  capybara (~> 2.0.0)
+  capybara-email
   chartkick
   coffee-rails (~> 4.0.0)
+  database_cleaner
   fabrication
   faker
   groupdate (~> 2.1.1)
@@ -212,6 +248,7 @@ DEPENDENCIES
   jquery-rails (~> 2.3)
   jquery-ui-rails
   koala
+  launchy
   less-rails
   letter_opener
   lunchy
@@ -224,6 +261,7 @@ DEPENDENCIES
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.0)
   sdoc
+  selenium-webdriver
   shoulda-matchers
   taps
   therubyracer
@@ -231,3 +269,5 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   unicorn
+  vcr
+  webmock
