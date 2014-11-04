@@ -7,4 +7,7 @@ Paperthincut::Application.routes.draw do
   resources :requests
   resources :users
   root to: "requests#index"
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 end
