@@ -1,5 +1,9 @@
-<div class="span6 well">
-  <%= @user.username %>
-  <%= @user.email %>
-   <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="span3 well">
+  <ul>
+    <li><%= @user.username %></li>
+    <li><%= @user.email %></li>
+    <br/>
+    <li><%= link_to "Edit", edit_user_path %></li>
+    <li><%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <ul>
 </div>
