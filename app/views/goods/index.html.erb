@@ -1,18 +1,18 @@
-<div class="span3 well">
+<div class="span4 well">
   <h3>Products</h3>
   <br/>
   <% @goods.each do |good| %>
-    <li><%= link_to good.name, good %></li>
+    <h4><li><%= link_to good.name, good %></li></h4>
   <% end %>
   <hr>
   <%= link_to "Add Product", new_good_path %>
 </div>
-<div class="span3 well">
-  <%= link_to "See Orders", requests_path %>
+<div class="span4 well">
+  <h4><%= link_to "Orders", requests_path %></h4>
 </div>
-<div class="span3 well">
-  <%= link_to "Notes", posts_path %>
+<div class="span4 well">
+  <h4><%= link_to "Notes", posts_path %></h4>
 </div>
-<div class="span3 well">
-  <%= link_to "See Users", users_path %>
+<div class="span4 well">
+  <h4><%= link_to "Users", users_path %></h4>
 </div>

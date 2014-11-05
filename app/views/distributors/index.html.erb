@@ -1,9 +1,8 @@
-
 <div class="span5 well">
   <h3>Distributors</h3>
   <br/>
   <% @distributors.each do |distributor| %>
-    <li><%= link_to distributor.name, distributor %></li>
+    <h4><li><%= link_to distributor.name, distributor %></li></h4>
   <% end %>
   <hr>
   <%= link_to "Add Distributor", new_distributor_path(@distributor) %>
