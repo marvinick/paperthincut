@@ -27,6 +27,7 @@ gem 'fabrication'
 gem 'faker'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'unicorn'
+gem 'angularjs-rails'
 
 group :doc do
   gem 'sdoc', require: false
