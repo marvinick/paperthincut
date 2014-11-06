@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   include CurrentBasket
   before_action :set_basket, only: [:new, :create]
+  before_action :require_user, except: [:show, :index]
 
   def index
     @requests = Request.order(:name).reverse

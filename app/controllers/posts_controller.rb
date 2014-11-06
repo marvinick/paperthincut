@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
+  before_action :require_user, except: [:index, :show]
 
   def index
     @posts = Post.order(:title).reverse

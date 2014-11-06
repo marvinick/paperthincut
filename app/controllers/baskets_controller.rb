@@ -1,5 +1,6 @@
 class BasketsController < ApplicationController
   before_action :set_basket, only: [:show, :edit, :update, :destroy]
+  before_action :require_user
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_basket
 
   def index

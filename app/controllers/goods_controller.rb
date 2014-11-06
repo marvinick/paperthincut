@@ -1,5 +1,6 @@
 class GoodsController < ApplicationController
   before_action :set_good, only: [:edit, :update, :show, :destroy]
+  before_action :require_user, except: [:index, :show]
 
   def index
     @goods = Good.order(:name)

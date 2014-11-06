@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   include CurrentBasket
   before_action :set_basket, only: [:create]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
 
   def index
     @items = Item.all
