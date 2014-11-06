@@ -6,7 +6,7 @@
   <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
-<div class="span6 well">
+<div class="span3 well">
   <% @distributor.goods.each do |good| %>
     <h4><li><%= link_to good.name, good_path(good) %></li></h4>
     <%= button_to "Order", items_path(good_id: good) %>
