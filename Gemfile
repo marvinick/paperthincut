@@ -8,7 +8,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-ui-rails'
 gem 'jquery-rails', '~> 2.3'
 gem 'rails-asset-jqueryui'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'twitter-bootstrap-rails'
 gem "less-rails"
@@ -16,6 +15,7 @@ gem "therubyracer"
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "rails_serve_static_assets"
 gem 'omniauth'
+gem 'turbolinks'
 gem 'koala'
 gem "chartkick"
 gem 'groupdate', '~> 2.1.1'
