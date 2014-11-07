@@ -1,0 +1,7 @@
+<div class="span5 well">
+  <% @inventories.each do |inventory| %>
+  <ul>
+    <li><%= link_to inventory.name, inventory %></li>
+  </ul>
+  <% end %>
+</div>

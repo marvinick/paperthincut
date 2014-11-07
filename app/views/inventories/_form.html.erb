@@ -1,0 +1,20 @@
+<div class="span5 well">
+  <%= form_for @inventory do |f| %>
+    <div class="control-group">
+      <%= f.label :name %>
+      <%= g.text_field :name %>
+    </div>
+    <div class="control-group">
+      <%= f.label :unit %>
+      <%= g.text_field :unit %>
+    </div>
+    <div class="control-group">
+      <%= f.label :amount %>
+      <%= g.text_field :amount %>
+    </div>
+    <div class="control-group">
+      <%= f.label :description %>
+      <%= g.text_area :description %>
+    </div>
+  <% end %>
+</div>
