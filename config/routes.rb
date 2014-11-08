@@ -7,7 +7,7 @@ Paperthincut::Application.routes.draw do
   resources :requests
   resources :users
   resources :inventories
-  root to: "requests#index"
+  root to: "goods#index"
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
