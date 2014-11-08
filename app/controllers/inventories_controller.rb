@@ -1,12 +1,12 @@
 class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:edit, :update, :show]
 
-  def new
-    @inventory = Inventory.new
+  def index
+    @inventories = Inventory.order(:name).reverse
   end
 
-  def index
-    @inventories = Inventory.order(:title).reverse
+  def new
+    @inventory = Inventory.new
   end
 
   def create
