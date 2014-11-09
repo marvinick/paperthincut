@@ -1,24 +1,24 @@
-<div class="span3 well">
+<div class="span4 well">
   <%= pie_chart Request.group(:created_at).count %>
   <h4><%= link_to "Order", distributors_path %></h4>
 </div>
-<div class="span3 well">
+<div class="span4 well">
   <%= geo_chart Request.group(:created_at).count %>
   <h4><%= link_to "Order History", requests_path %></h4>
 </div>
-<div class="span3 well">
+<div class="span4 well">
   <%= pie_chart Post.group(:created_at).count %>
   <h4><%= link_to "Notes", posts_path %></h4>
 </div>
-<div class="span3 well">
+<div class="span4 well">
   <%= pie_chart User.group(:created_at).count %>
   <h4><%= link_to "Users", users_path %></h4>
 </div>
-<div class="span3 well">
+<div class="span4 well">
   <%= column_chart Item.group(:request_id).count %>
   <h4><%= link_to "Inventories", inventories_path %></h4>
 </div>
-<div class="span3 well">
+<div class="span4 well">
   <h4>Products</h4>
   <br/>
   <% @goods.each do |good| %>
