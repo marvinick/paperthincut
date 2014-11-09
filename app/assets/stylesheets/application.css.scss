@@ -15,6 +15,14 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
+ label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  margin-right: 1em;
+  display: block
+ }
+
  body {
   padding-left: 10px;
   background-color: #525252;
