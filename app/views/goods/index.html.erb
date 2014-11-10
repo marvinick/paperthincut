@@ -1,9 +1,9 @@
 <div class="span4 well">
-  <%= pie_chart Request.group(:name).count %>
+  <%= line_chart Request.group(:name).group(:created_at).count %>
   <h4><%= link_to "Order", distributors_path %></h4>
 </div>
 <div class="span4 well">
-  <%= column_chart Request.group_by_hour_of_day(:created_at, format: "%l %P").count %>
+  <%= pie_chart Distributor.group(:name).count %>
   <h4><%= link_to "Order History", requests_path %></h4>
 </div>
 <div class="span4 well">
@@ -15,15 +15,13 @@
   <h4><%= link_to "Users", users_path %></h4>
 </div>
 <div class="span4 well">
-  <%= line_chart Item.group(:request_id).count %>
+  <%= bar_chart Inventory.group(:name).count %>
   <h4><%= link_to "Inventories", inventories_path %></h4>
 </div>
 <div class="span4 well">
   <h4>Products</h4>
   <br/>
-  <% @goods.each do |good| %>
-    <h4><li><%= link_to good.name, good %></li></h4>
-  <% end %>
+  <h4><li><%= render 'good'%></li></h4>
   <hr>
   <%= link_to "Add Product", new_good_path %>
 </div>
