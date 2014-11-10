@@ -2,7 +2,7 @@ class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:edit, :update, :show]
 
   def index
-    @inventories = Inventory.order(:name).reverse
+    @inventories = Inventory.order(:created_at).reverse
   end
 
   def new
@@ -19,7 +19,9 @@ class InventoriesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @goods = Good.all
+  end
 
   def edit; end
 

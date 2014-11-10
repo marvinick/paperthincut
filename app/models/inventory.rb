@@ -1,5 +1,4 @@
 class Inventory < ActiveRecord::Base
-  has_many :products
+  has_many :goods, foreign_key: :inventory_id
   validates :name, presence: true
-  validates :unit, presence: true
 end

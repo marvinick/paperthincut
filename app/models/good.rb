@@ -1,7 +1,7 @@
 class Good < ActiveRecord::Base
   has_many :good_distributors
   has_many :distributors, through: :good_distributors
-
+  belongs_to :inventory, foreign_key: :inventory_id
   validates :name, presence: true
   validates :unit, presence: true
   has_many :items
