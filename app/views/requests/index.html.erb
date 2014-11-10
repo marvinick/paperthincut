@@ -1,5 +1,5 @@
 <div class="span8 well">
-  <%= pie_chart Request.group(:created_at).count %>
+  <%= pie_chart Request.group(:name).count %>
 </div>
 <div class="span5 well">
   <% @requests.each do  |request| %>

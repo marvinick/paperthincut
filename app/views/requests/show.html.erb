@@ -6,7 +6,3 @@
   <br/>
   <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
-
-<div class="span8 well">
-  <%= pie_chart Request.group(:created_at).count %>
-</div>
