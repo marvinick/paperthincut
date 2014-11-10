@@ -2,8 +2,9 @@
   <div class="control-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <br/>
   </div>
   <div class="control-group">
-    <%= f.submit %>
+    <%= f.submit(@inventory.new_record? ? "New Inventory" : "Edit")%>
   </div>
 <% end %>

@@ -1,7 +1,8 @@
 <div class="span5 well">
   <% @inventories.each do |inventory| %>
-  <ul>
-    <li><%= link_to inventory.name, inventory %></li>
-  </ul>
+    <h4><li><%= link_to inventory.name, inventory %></li></h4>
   <% end %>
+</div>
+<div class="span3 well">
+  <h4><%= link_to "New Inventory", new_inventory_path %></h4>
 </div>
