@@ -10,5 +10,5 @@
   </ul>
 </div>
 <div class="span8 well">
-  <%= column_chart Item.group(:request_id).count %>
+  <%= column_chart Good.group(:created_at).count %>
 </div>

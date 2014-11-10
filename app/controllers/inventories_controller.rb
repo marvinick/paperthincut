@@ -1,5 +1,6 @@
 class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:edit, :update, :show]
+  before_action :require_user, except: [:show, :index]
 
   def index
     @inventories = Inventory.order(:created_at).reverse

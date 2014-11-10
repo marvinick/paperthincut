@@ -52,7 +52,7 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:name, :email, :additional)
+    params.require(:request).permit(:name, :email, :additional, :good_id)
   end
 
 end

@@ -5,6 +5,7 @@ class Good < ActiveRecord::Base
   validates :name, presence: true
   validates :unit, presence: true
   has_many :items
+  has_many :requests, foreign_key: :good_id
   before_destroy :ensure_not_referenced_by_item
 
   private
