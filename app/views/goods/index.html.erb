@@ -19,9 +19,9 @@
   <h4><%= link_to "Inventories", inventories_path %></h4>
 </div>
 <div class="span4 well">
-  <h4>Products</h4>
-  <br/>
+  <%= pie_chart Good.group(:name).count %>
+  <h4><%= link_to "New Product", new_good_path %></h4>
+  <% if logged_in? %>
   <h4><li><%= render 'good'%></li></h4>
-  <hr>
-  <%= link_to "Add Product", new_good_path %>
+  <% end %>
 </div>
