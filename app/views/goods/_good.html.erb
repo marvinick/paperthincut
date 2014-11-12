@@ -1,8 +1,8 @@
 <% @goods.each do |good| %>
 <table>
-  <td>
-    <tr><%= link_to good.name, good %></tr>
-    <tr><%= good.quantity %></tr>
-  </td>
+  <tr>
+    <td><%= link_to good.name, good %></td>
+    <td><%= good.quantity %></td>
+  </tr>
 </table>
 <% end %>
