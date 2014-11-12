@@ -48,6 +48,6 @@ class GoodsController < ApplicationController
   end
 
   def goods_params
-    params.require(:good).permit(:name, :description, :price, :unit, :amount, :cost, distributor_ids: [])
+    params.require(:good).permit(:name, :description, :price, :unit, :quantity, :cost, distributor_ids: [])
   end
 end

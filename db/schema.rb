@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110210345) do
+ActiveRecord::Schema.define(version: 20141112220217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20141110210345) do
     t.integer  "cost"
     t.string   "unit"
     t.integer  "inventory_id"
+    t.decimal  "quantity"
   end
 
   create_table "inventories", force: true do |t|
