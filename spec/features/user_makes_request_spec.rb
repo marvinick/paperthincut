@@ -9,4 +9,7 @@ feature "User makes request" do
     click_button "Create Request"
     expect(current_path).to eq(root_path)
   end
+
+  scenario 'User un-succesfully makes request' do
+  end
 end
