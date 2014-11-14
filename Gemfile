@@ -28,6 +28,7 @@ gem 'faker'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'unicorn'
 gem 'angularjs-rails'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false

@@ -109,6 +109,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    newrelic_rpm (3.9.6.257)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     omniauth (1.2.2)
@@ -254,6 +255,7 @@ DEPENDENCIES
   less-rails
   letter_opener
   lunchy
+  newrelic_rpm
   omniauth
   pg
   rails (= 4.0.1)
