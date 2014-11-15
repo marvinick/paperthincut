@@ -15,6 +15,9 @@ gem "therubyracer"
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "rails_serve_static_assets"
 gem 'omniauth'
+gem 'devise'
+gem 'omniauth-twitter'
+gem 'uuidtools'
 gem 'turbolinks'
 gem 'koala'
 gem "chartkick"
@@ -28,6 +31,7 @@ gem 'faker'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'unicorn'
 gem 'angularjs-rails'
+gem 'ngmin-rails'
 gem 'newrelic_rpm'
 
 group :doc do

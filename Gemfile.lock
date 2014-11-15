@@ -60,6 +60,13 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.3.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -110,11 +117,21 @@ GEM
     multi_json (1.10.1)
     multipart-post (2.0.0)
     newrelic_rpm (3.9.6.257)
+    ngmin-rails (0.4.0)
+      rails (>= 3.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
+    oauth (0.4.7)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.1.0)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -145,6 +162,8 @@ GEM
     rdoc (4.1.2)
       json (~> 1.4)
     ref (1.0.5)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
@@ -222,7 +241,10 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.5)
     vcr (2.9.3)
+    warden (1.2.3)
+      rack (>= 1.0)
     webmock (1.20.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -243,6 +265,7 @@ DEPENDENCIES
   chartkick
   coffee-rails (~> 4.0.0)
   database_cleaner
+  devise
   fabrication
   faker
   groupdate (~> 2.1.1)
@@ -256,7 +279,9 @@ DEPENDENCIES
   letter_opener
   lunchy
   newrelic_rpm
+  ngmin-rails
   omniauth
+  omniauth-twitter
   pg
   rails (= 4.0.1)
   rails-asset-jqueryui
@@ -273,5 +298,6 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   unicorn
+  uuidtools
   vcr
   webmock

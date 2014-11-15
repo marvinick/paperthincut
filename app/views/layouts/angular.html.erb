@@ -1,0 +1,19 @@
+“1 <!DOCTYPE html>
+ 2 <html lang="en" data-ng-app="myApp">
+ 3   <head>
+ 4     <meta charset="utf-8">
+ 5     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+ 6     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 7     <title><%= content_for?(:title) ? yield(:title) : "shareup" %></title>
+ 8     <%= csrf_meta_tags %>
+ 9     <%= stylesheet_link_tag "application", :media => "all" %>
+10   </head>
+11   <body>
+12     <div class="container">
+13       <h1>Text!</h1>
+14       <div data-ng-view></div>
+15     </div> <!-- /container -->
+16     <%= javascript_include_tag "application" %>
+17   </body>
+18 </html>”
+
