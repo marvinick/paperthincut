@@ -17,3 +17,11 @@
 //= require_tree .
 
 var order = angular.module("order",[]);
+
+app.controller("singleOrderCtrl", function($scope) {
+  $scope.orders = [
+    {name: "good-1"},
+    {name: "good-2"},
+    {name: "good-3"}
+  ];
+});

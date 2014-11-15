@@ -1,15 +1,20 @@
-<div class="span3 well">
-  <h3><li><%= @distributor.name %></li></h3>
-  <li><%= @distributor.description %></li>
-  <br/>
-  <%= link_to "Edit", edit_distributor_path %>
-  <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+<div class="order" ng-controller=singleOrderCtrl>
+  <div class="span3 well">
+    <h3><li><%= @distributor.name %></li></h3>
+    <li><%= @distributor.description %></li>
+    <br/>
+    <%= link_to "Edit", edit_distributor_path %>
+    <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 
-<div class="span3 well">
-  <% @distributor.goods.each do |good| %>
-    <h4><li><%= link_to good.name, good_path(good) %></li></h4>
-    <%= button_to "Order", items_path(good_id: good) %>
-    <%= render good.distributors %>
-  <% end %>
+  <div class="span3 well">
+    <% @distributor.goods.each do |good| %>
+      <h4><li><%= link_to good.name, good_path(good) %></li></h4>
+      <%= button_to "Order", items_path(good_id: good) %>
+      <%= render good.distributors %>
+    <% end %>
+  </div>
+  <div class="span3 well">
+    {{ orders }}
+  </div>
 </div>
