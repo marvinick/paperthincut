@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require angular
 //= require_tree .
+
+var order = angular.module("order",[]);
