@@ -1,12 +1,11 @@
 Paperthincut::Application.routes.draw do
-  devise_for :users
   resources :items
   resources :baskets
   resources :posts
   resources :goods
   resources :distributors
   resources :requests
-  resources :users
+  resources :users, defaults: { format: 'json' }
   resources :inventories
   root to: "goods#index"
 

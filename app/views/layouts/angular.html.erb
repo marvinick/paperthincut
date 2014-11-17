@@ -1,19 +1,19 @@
-“1 <!DOCTYPE html>
- 2 <html lang="en" data-ng-app="myApp">
- 3   <head>
- 4     <meta charset="utf-8">
- 5     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
- 6     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 7     <title><%= content_for?(:title) ? yield(:title) : "shareup" %></title>
- 8     <%= csrf_meta_tags %>
- 9     <%= stylesheet_link_tag "application", :media => "all" %>
-10   </head>
-11   <body>
-12     <div class="container">
-13       <h1>Text!</h1>
-14       <div data-ng-view></div>
-15     </div> <!-- /container -->
-16     <%= javascript_include_tag "application" %>
-17   </body>
-18 </html>”
+<!DOCTYPE html>
+<html ng-app>
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title><%= content_for?(:title) ? yield(:title) : "shareup" %></title>
+     <%= csrf_meta_tags %>
+     <%= stylesheet_link_tag "application", :media => "all" %>
+   </head>
+   <body>
+     <div class="container">
+       <h1>Text!</h1>
+       <div data-ng-view></div>
+     </div> <!-- /container -->
+     <%= javascript_include_tag "application" %>
+   </body>
+ </html>
 
