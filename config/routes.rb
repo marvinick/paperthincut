@@ -8,6 +8,7 @@ Paperthincut::Application.routes.draw do
   resources :users, defaults: { format: 'json' }
   resources :inventories
   root to: "goods#index"
+  resources :backouts
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
