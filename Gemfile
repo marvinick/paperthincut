@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.0.1'
 gem 'jquery-ui-rails'
 gem 'jquery-rails', '~> 2.3'
 gem 'rails-asset-jqueryui'
@@ -43,6 +43,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails' , '~> 2.0'
+  gem 'letter_opener'
 end
 
 group :test do
@@ -54,10 +55,6 @@ group :test do
   gem 'webmock'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-end
-
-group :development do
-  gem 'letter_opener'
 end
 
 group :production do

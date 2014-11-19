@@ -4,11 +4,17 @@
   </div>
 </div>
 <hr>
-<div class="span3 well" >
-  <form>
-    <input type="text" ng-model="newEntry.name" placeholder="Enter here">
-  </form>
- {{entry.name}}
+<div class="span3 well">
+  <div ng-controller="OrderCtrl">
+    <form>
+      <input type="text" ng-model="newEntry.name" placeholder="Enter here">
+    </form>
+   <ul>
+    <li ng-repeat="entry in entries">
+      {{entry.name}}
+    </li>
+   </ul>
+  </div>
 </div>
 <div class="span4 well">
   <%= line_chart Request.group(:name).group(:created_at).count %>
