@@ -47,13 +47,14 @@ th, td {
     width: 80px;
 }
 
- label {
-  width: 5em;
-  float: left;
-  text-align: right;
-  margin-right: 1em;
-  display: block
- }
+
+
+ input[type=checkbox] + label {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 2em;
+    line-height: 1em;
+}
 
  body {
   padding-left: 10px;

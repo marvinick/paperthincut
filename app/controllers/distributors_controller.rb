@@ -48,6 +48,6 @@ class DistributorsController < ApplicationController
   end
 
   def distributor_params
-    params.require(:distributor).permit(:name, :description, good_ids: [])
+    params.require(:distributor).permit(:name, :email, :description, good_ids: [])
   end
 end

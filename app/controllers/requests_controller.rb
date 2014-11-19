@@ -14,6 +14,7 @@ class RequestsController < ApplicationController
     end
 
     @request = Request.new
+    @distributors = Distributor.all
   end
 
   def create
@@ -52,7 +53,7 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:name, :email, :additional, :good_id)
+    params.require(:request).permit(:name, :email, :additional, :good_id, distributor_ids: [])
   end
 
 end
