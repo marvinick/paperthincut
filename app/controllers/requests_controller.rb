@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   before_action :require_user, except: [:show, :index]
 
   def index
-    @requests = Request.order(:name).reverse
+    @requests = Request.order(:created_at).reverse
   end
 
   def new
