@@ -1,25 +1,16 @@
 <div class="span5 well">
   <%= form_for @request do |f| %>
-  <div class="span4 well">
-     <%= f.label :Name %>
-     <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :name do |cb|%>
-      <% cb.label(class: "checkbox inline") {cb.check_box(class: "checkbox") + cb.text} %>
-    <% end %>
+  <div class="control-group">
+     <%= f.label :name %>
+     <%= f.text_field :name %>
   </div>
-    <br/>
-  <div class="span4 well">
-    <%= f.label :Email %>
-    <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :email do |cb|%>
-      <% cb.label(class: "checkbox inline") {cb.check_box(class: "checkbox") + cb.text} %>
-    <% end %>
+  <br/>
+  <div class="control-group">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
   </div>
-    <br/>
-  <div class="span4 well">
-    <%= f.label :additional %>
-    <%= f.text_area :additional %>
-  </div>
-    <br/>
-  <div class="span3 well">
+  <br/>
+  <div class="control-group">
     <%= f.submit %>
   </div>
   <% end %>

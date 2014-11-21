@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <center><h3>Simplify your operation. Aim to help small businesses, <strong>//paprthin</strong> makes ordering, managing inventory, posting messages easier for managers<h3></center>
+  <center><h3>Simplify your operation. <strong>//paprthin</strong> makes ordering, managing inventory and posting messages easier.<h3></center>
 </div>
 <div class="col-md-4">
   <%= line_chart Request.group(:name).group(:created_at).count %>
@@ -7,7 +7,7 @@
 </div>
 <div class="col-md-4">
   <%= pie_chart Distributor.group(:name).count %>
-  <p>See your <strong><%= link_to "Order History", requests_path %></strong> here. Complete with charts for you to glance the dynamic of your ordering every week.</p>
+  <p>See your <strong><%= link_to "Order History", requests_path %></strong> here. Complete with charts for you to glance the dynamic of your orders every week.</p>
 </div>
 <div class="col-md-4">
   <%= bar_chart Post.group(:title).group(:created_at).count %>
