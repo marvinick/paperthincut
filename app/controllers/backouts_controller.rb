@@ -1,4 +1,4 @@
-class Backouts < ApplicationController
+class BackoutsController < ApplicationController
 
   def index
     @backouts = Backout.all
