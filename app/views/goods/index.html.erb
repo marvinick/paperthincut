@@ -3,11 +3,11 @@
 </div>
 <div class="col-md-4">
   <%= line_chart Request.group(:name).group(:created_at).count %>
-    <p>Only <strong><%= link_to "Order", distributors_path %></strong> list the items that you want. No need to shift through the catalog everytime anymore.</p>
+    <p>Only <strong><%= link_to "Order", distributors_path %></strong> list the items that you want. No need to shift through the catalog everytime anymore. Also see <strong><%= link_to "History", requests_path %></strong></p>
 </div>
 <div class="col-md-4">
   <%= pie_chart Distributor.group(:name).count %>
-  <p>See your <strong><%= link_to "Order History", requests_path %></strong> here. Complete with charts for you to glance the dynamic of your orders every week.</p>
+  <p>Before head to the inventory, we also have <strong><%= link_to "Backouts", backouts_path %></strong> feature. To make sure you count them right<p>
 </div>
 <div class="col-md-4">
   <%= bar_chart Post.group(:title).group(:created_at).count %>
@@ -25,6 +25,7 @@
   <%= pie_chart Good.group(:name).count %>
   <p>Add your <%= link_to "Products", new_good_path %></h4> here. You can view, edit or delete them too.</p>
 </div>
+
 <div class="span4 well">
     <form>
       <input type="text" ng-model="newEntry.name" placeholder="Enter here">
