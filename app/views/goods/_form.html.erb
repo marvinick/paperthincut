@@ -1,4 +1,4 @@
-<div class="main">
+<div class="col-md-5">
   <%= form_for @good do |f| %>
   <div class="control-group">
     <%= f.label :name %>
@@ -20,11 +20,13 @@
     <%= f.text_area :description %>
   </div>
   <br/>
-  <%= f.label "Distributors" %>
-  <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :name do |cb| %>
-    <% cb.label(class: "checkbox inline") {cb.check_box(class: "checkbox") + cb.text} %>
+  <div class="control-group">
+    <%= f.label "Distributors:" %>
+    <%= f.collection_check_boxes :distributor_ids, Distributor.all, :id, :name do |cb| %>
+      <% cb.label(class: "checkbox inline") {cb.check_box(class: "checkbox") + cb.text} %>
     <% end %>
+  </div>
   <hr>
-  <%= f.submit(@good.new_record? ? "Add Product" : "Update Product") %>
+  <%= f.submit "Submit", class: "btn btn-success" %>
   <% end %>
 </div>

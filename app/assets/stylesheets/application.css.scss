@@ -26,17 +26,17 @@ th, td {
 }
 
 input[type=checkbox] + label {
-    display: inline-block;
+    display: inline;
     margin-left: 0.5em;
     margin-right: 2em;
     line-height: 1em;
 }
 
  body {
-  padding-left: 10px;
+  padding-left: 15px;
   background-color: #555555;
-  padding-right: 10px;
-  padding-top: 70px;
+  padding-right: 25px;
+  padding-top: 75px;
  }
 
  li {
