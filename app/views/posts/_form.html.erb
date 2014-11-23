@@ -1,9 +1,13 @@
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br/>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <hr>
-  <%= f.submit(@post.new_record? ? "Create Message" : "Update Message") %>
-<% end %>
+<div class="col-md-6">
+  <%= form_for @post do |f| %>
+    <div class="control-group">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="control-group">
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
+    <%= f.submit "Submit", class: 'btn btn-success' %>
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
 class BackoutsController < ApplicationController
+  before_action :set_backout, only: [:create, :show, :edit, :update, :destroy]
 
   def index
     @backouts = Backout.all
@@ -17,16 +18,11 @@ class BackoutsController < ApplicationController
     end
   end
 
-  def show
-    @backout = Backout.find(params[:id])
-  end
+  def show; end
 
-  def edit
-    @backout = Backout.find(params[:id])
-  end
+  def edit; end
 
   def create
-    @backout = Backout.find(params[:id])
     if @backout.update(backout_params)
       redirect_to backouts_path
     else
@@ -35,6 +31,10 @@ class BackoutsController < ApplicationController
   end
 
   private
+
+  def set_backout
+    @backout = Backout.find(params[:id])
+  end
 
   def backout_params
     params.require(:backout).permit(:name, :month, :unit, :amount)
