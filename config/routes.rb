@@ -5,7 +5,7 @@ Paperthincut::Application.routes.draw do
   resources :goods
   resources :distributors
   resources :requests
-  resources :users, defaults: { format: 'json' }
+  resources :users
   resources :inventories
   root to: "goods#index"
   resources :backouts
