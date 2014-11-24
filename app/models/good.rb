@@ -1,4 +1,6 @@
 class Good < ActiveRecord::Base
+  has_many :inventories, through: :good_inventories
+  has_many :good_inventories
   has_many :good_distributors
   has_many :distributors, through: :good_distributors
   belongs_to :inventory
