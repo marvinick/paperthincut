@@ -1,6 +1,6 @@
 <div class="span4 well">
- <h4><%= @backout.month %></h4>
- <hr>
+ <h4><%= link_to @backout.month, edit_backout_path %></h4>
+ <em><%= link_to 'Delete', backout_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
   <table>
   <tr>
     <td><%= @backout.item1 %></td>

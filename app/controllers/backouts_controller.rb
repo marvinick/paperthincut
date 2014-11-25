@@ -1,5 +1,6 @@
 class BackoutsController < ApplicationController
   before_action :set_backout, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:show, :index]
 
   def index
     @backouts = Backout.all
@@ -29,6 +30,13 @@ class BackoutsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @backout = Backout.find(params[:id])
+    @destroy.destroy
+    redirect_to backouts_path
+  end
+
 
   private
 
