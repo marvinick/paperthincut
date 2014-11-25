@@ -34,7 +34,7 @@ class DistributorsController < ApplicationController
   end
 
   def destroy
-    @good.destroy
+    @distributor.destroy
     respond_to do |format|
       format.html { redirect_to distributors_url }
       format.json { head :no_content }
