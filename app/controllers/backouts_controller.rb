@@ -33,7 +33,7 @@ class BackoutsController < ApplicationController
 
   def destroy
     @backout = Backout.find(params[:id])
-    @destroy.destroy
+    @backout.destroy
     redirect_to backouts_path
   end
 

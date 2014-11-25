@@ -29,6 +29,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'angularjs-rails'
+gem 'turbolinks'
 
 group :doc do
   gem 'sdoc', require: false
