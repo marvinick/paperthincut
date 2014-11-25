@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <% @backouts.each do |backout| %>
-  <%= backout.month %>
+  <%= link_to backout.month, backout %>
   <% end %>
 </div>
 <div class="col-md-4">

@@ -1,13 +1,149 @@
-<div class="col-md-6">
+<div class="col-md-3">
   <%= form_for @backout do |f| %>
+  <table>
     <div class="control-group">
       <%= f.label :month%>
       <%= f.text_field :month %>
-     </div>
-    <div class="control-group">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-     </div>
+    </div>
+    <tr>
+      <td>
+        <div class="control-group">
+          <%= f.label :item1 %>
+          <%= f.text_field :item1 %>
+        </div>
+      </td>
+      <br/>
+      <td>
+        <div class="control-group">
+          <%= f.label :amount1 %>
+          <%= f.text_field :amount1 %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <div class="control-group">
+          <%= f.label :item2 %>
+          <%= f.text_field :item2 %>
+         </div>
+      </td>
+      <td>
+         <div class="control-group">
+          <%= f.label :amount2 %>
+          <%= f.text_field :amount2 %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+       <div class="control-group">
+        <%= f.label :item3 %>
+        <%= f.text_field :item3 %>
+       </div>
+      </td>
+      <td>
+         <div class="control-group">
+          <%= f.label :amount3 %>
+          <%= f.text_field :amount3 %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <div class="control-group">
+          <%= f.label :item4 %>
+          <%= f.text_field :item4 %>
+         </div>
+      </td>
+      <td>
+         <div class="control-group">
+          <%= f.label :amount4 %>
+          <%= f.text_field :amount4 %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+         <div class="control-group">
+          <%= f.label :item5 %>
+          <%= f.text_field :item5 %>
+         </div>
+       </td>
+       <td>
+         <div class="control-group">
+          <%= f.label :amount5 %>
+          <%= f.text_field :amount5 %>
+        </div>
+       </td>
+       <tr>
+         <td>
+           <div class="control-group">
+            <%= f.label :item6 %>
+            <%= f.text_field :item6 %>
+           </div>
+         </td>
+         <td>
+           <div class="control-group">
+            <%= f.label :amount6 %>
+            <%= f.text_field :amount6 %>
+           </div>
+         </td>
+        </tr>
+        <tr>
+          <td>
+           <div class="control-group">
+            <%= f.label :item7 %>
+            <%= f.text_field :item7 %>
+           </div>
+          </td>
+          <td>
+           <div class="control-group">
+            <%= f.label :amount7 %>
+            <%= f.text_field :amount7 %>
+           </div>
+         </td>
+       </tr>
+          <td>
+           <div class="control-group">
+            <%= f.label :item8 %>
+            <%= f.text_field :item8 %>
+           </div>
+          </td>
+          <td>
+           <div class="control-group">
+            <%= f.label :amount8 %>
+            <%= f.text_field :amount8 %>
+           </div>
+         </td>
+        <tr>
+          <td>
+           <div class="control-group">
+            <%= f.label :item9 %>
+            <%= f.text_field :item9 %>
+           </div>
+          </td>
+          <td>
+           <div class="control-group">
+            <%= f.label :amount9 %>
+            <%= f.text_field :amount9 %>
+           </div>
+         </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="control-group">
+            <%= f.label :item10 %>
+            <%= f.text_field :item10 %>
+           </div>
+          </td>
+          <td>
+           <div class="control-group">
+            <%= f.label :amount10 %>
+            <%= f.text_field :amount10 %>
+           </div>
+         </td>
+        </tr>
+   </table>
      <%= f.submit "Submit", class: 'btn btn-success' %>
   <% end %>
 </div>

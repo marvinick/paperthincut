@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124025522) do
+ActiveRecord::Schema.define(version: 20141125021152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,26 @@ ActiveRecord::Schema.define(version: 20141124025522) do
     t.integer  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "item1"
+    t.string   "item2"
+    t.string   "item3"
+    t.string   "item4"
+    t.string   "item5"
+    t.string   "item6"
+    t.string   "item7"
+    t.string   "item8"
+    t.string   "item9"
+    t.string   "item10"
+    t.integer  "amount1"
+    t.integer  "amount2"
+    t.integer  "amount3"
+    t.integer  "amount4"
+    t.integer  "amount5"
+    t.integer  "amount6"
+    t.integer  "amount7"
+    t.integer  "amount8"
+    t.integer  "amount9"
+    t.integer  "amount10"
   end
 
   create_table "baskets", force: true do |t|

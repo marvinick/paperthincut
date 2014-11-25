@@ -15,14 +15,13 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
- table{
-    table-layout: fixed;
-    width: 60px;
+ table {
+  width: 50%;
+  table-layout: relative;
 }
 
-th, td {
-    overflow: hidden;
-    width: 80px;
+td {
+  width: 50%;
 }
 
 input[type=checkbox] + label {
