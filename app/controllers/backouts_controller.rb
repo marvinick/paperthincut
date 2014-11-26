@@ -12,10 +12,10 @@ class BackoutsController < ApplicationController
 
   def create
     @backout = Backout.new(backout_params)
-    if @backout.save
-      redirect_to backouts_path
-    else
+    if params [:email_button] || !@backout.save
       render :new
+    else
+      redirect_to backouts_path
     end
   end
 

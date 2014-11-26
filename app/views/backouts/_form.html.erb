@@ -5,6 +5,8 @@
       <%= f.label :month%>
       <%= f.text_field :month %>
     </div>
+    <%= f.submit "Email", :name => 'email_button' %>
+    <br/>
     <tr>
       <td>
         <div class="control-group">
@@ -144,6 +146,6 @@
          </td>
         </tr>
    </table>
-     <%= f.submit "Submit", class: 'btn btn-success' %>
+   <%= f.submit "Submit", class: 'btn btn-success' %>
   <% end %>
 </div>
