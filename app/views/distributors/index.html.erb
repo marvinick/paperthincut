@@ -1,9 +1,15 @@
 <div class="span5 well">
-  <h3>Distributors</h3>
+  <h4>Distributors</h4>
   <br/>
   <% @distributors.each do |distributor| %>
     <h4><li><%= link_to distributor.name, distributor %></li></h4>
   <% end %>
   <hr>
   <%= link_to "Add Distributor", new_distributor_path(@distributor) %>
+</div>
+<div class="span5 well">
+  <h4>Products</h4>
+  <% @goods.each do |good| %>
+    <li><%= link_to good.name, good %></li>
+  <% end %>
 </div>

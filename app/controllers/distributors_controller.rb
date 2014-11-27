@@ -4,6 +4,7 @@ class DistributorsController < ApplicationController
 
   def index
     @distributors = Distributor.all
+    @goods = Good.all
   end
 
   def new

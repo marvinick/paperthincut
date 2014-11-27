@@ -8,7 +8,6 @@ class GoodsController < ApplicationController
 
   def new
     @good = Good.new
-    @goods = Good.order(:created_at).reverse
   end
 
   def create
