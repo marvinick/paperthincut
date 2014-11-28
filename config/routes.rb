@@ -2,11 +2,11 @@ Paperthincut::Application.routes.draw do
   resources :items
   resources :baskets
   resources :posts
-  resources :goods
   resources :distributors
   resources :requests
   resources :users
   resources :inventories
+  resources :goods
   root to: "goods#index"
   resources :backouts
 

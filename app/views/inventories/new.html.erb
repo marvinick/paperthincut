@@ -1,3 +1,19 @@
 <div class="span5 well">
   <%= render 'form' %>
 </div>
+
+<div class="span5 well">
+ <% @inventories.each do |inventory| %>
+ <table>
+  <tr>
+    <td><%= link_to inventory.name, inventory %> </td>
+    <td><%= inventory.amount %> </td>
+    <td><%= inventory.unit %> </td>
+  </tr>
+  <% end %>
+  <div class="col-md-2">
+  <%= form_for @inventory do |f| %>
+  <%= f.submit "Email", :name => 'email_button' %>
+  <% end %>
+</div>
+</div>

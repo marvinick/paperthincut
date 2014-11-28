@@ -8,27 +8,31 @@ class InventoriesController < ApplicationController
 
   def new
     @inventory = Inventory.new
+    @inventories = Inventory.order(:created_at).reverse
   end
 
   def create
     @inventory = Inventory.new(inventory_params)
 
     if @inventory.save
-      redirect_to inventories_path
+      redirect_to new_inventory_path
     else
       render :new
     end
   end
 
   def show
+    @goods = Good.order(:name)
+  end
+
+  def edit
     @goods = Good.all
   end
 
-  def edit; end
-
   def update
+    @goods = Good.all
     if @inventory.update(inventory_params)
-      redirect_to inventories_path
+      redirect_to new_inventory_path
     else
       render :edit
     end
@@ -43,6 +47,6 @@ class InventoriesController < ApplicationController
   end
 
   def inventory_params
-    params.require(:inventory).permit(:name, :amount, :description, :unit)
+    params.require(:inventory).permit(:name, :amount, :description, :unit, good_ids: [])
   end
 end

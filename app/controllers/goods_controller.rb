@@ -20,7 +20,9 @@ class GoodsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @good = Good.all
+  end
 
   def update
 

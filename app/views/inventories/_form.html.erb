@@ -3,18 +3,15 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <br/>
   <div class="control-group">
     <%= f.label :amount %>
     <%= f.text_field :amount %>
   </div>
-  <br/>
   <div class="control-group">
     <%= f.label :unit %>
     <%= f.text_field :unit %>
   </div>
-  <br/>
   <div class="control-group">
-    <%= f.submit(@inventory.new_record? ? "New Inventory" : "Edit")%>
+    <%= f.submit "Submit", class: "btn btn-success" %>
   </div>
 <% end %>
