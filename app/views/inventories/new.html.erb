@@ -3,6 +3,7 @@
 </div>
 
 <div class="span5 well">
+<%= form_tag ('/inventories') do %>
  <% @inventories.each do |inventory| %>
  <table>
     <tr>
@@ -13,7 +14,6 @@
   </table>
   <% end %>
   <br/>
-    <%= form_for @inventory do |f| %>
-    <%= f.submit "Send it!!", :name => 'email_button' %>
-    <% end %>
+<%= submit_tag "Send It!!", :name => 'email_button' %>
+<% end %>
 </div>
