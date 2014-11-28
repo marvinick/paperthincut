@@ -5,15 +5,15 @@
 <div class="span5 well">
  <% @inventories.each do |inventory| %>
  <table>
-  <tr>
-    <td><%= link_to inventory.name, inventory %> </td>
-    <td><%= inventory.amount %> </td>
-    <td><%= inventory.unit %> </td>
-  </tr>
+    <tr>
+      <td><%= link_to inventory.name, inventory %> </td>
+      <td><%= inventory.amount %> </td>
+      <td><%= inventory.unit %> </td>
+    </tr>
+  </table>
   <% end %>
-  <div class="col-md-2">
-  <%= form_for @inventory do |f| %>
-  <%= f.submit "Email", :name => 'email_button' %>
-  <% end %>
-</div>
+  <br/>
+    <%= form_for @inventory do |f| %>
+    <%= f.submit "Send it!!", :name => 'email_button' %>
+    <% end %>
 </div>

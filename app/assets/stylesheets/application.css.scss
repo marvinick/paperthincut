@@ -15,6 +15,14 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
+ tr {
+  width: 50px; }
+
+td {
+  width: 75px;
+  height: 2px;
+}
+
 input[type=checkbox] {
     display: inline;
     margin-left: 0.5em;

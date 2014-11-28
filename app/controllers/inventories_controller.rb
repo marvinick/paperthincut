@@ -1,5 +1,5 @@
 class InventoriesController < ApplicationController
-  before_action :set_inventory, only: [:edit, :update, :show]
+  before_action :set_inventory, only: [:edit, :update, :show, :destroy]
   before_action :require_user, except: [:show, :index]
 
   def index
@@ -25,12 +25,9 @@ class InventoriesController < ApplicationController
     @goods = Good.order(:name)
   end
 
-  def edit
-    @goods = Good.all
-  end
+  def edit; end
 
   def update
-    @goods = Good.all
     if @inventory.update(inventory_params)
       redirect_to new_inventory_path
     else
@@ -38,7 +35,11 @@ class InventoriesController < ApplicationController
     end
   end
 
-
+  def destroy
+    @inventory = Inventory.find(params[:id])
+    @inventory.destroy
+    redirect_to new_inventory_path
+  end
 
   private
 
@@ -47,6 +48,6 @@ class InventoriesController < ApplicationController
   end
 
   def inventory_params
-    params.require(:inventory).permit(:name, :amount, :description, :unit, good_ids: [])
+    params.require(:inventory).permit(:name, :amount, :description, :unit)
   end
 end
