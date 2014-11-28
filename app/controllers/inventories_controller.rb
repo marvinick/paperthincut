@@ -15,6 +15,7 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.new(inventory_params)
 
     if @inventory.save
+      AppMailer.send_inventory(@inventory).deliver
       redirect_to new_inventory_path
     else
       render :new
