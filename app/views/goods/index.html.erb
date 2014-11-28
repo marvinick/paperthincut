@@ -11,7 +11,7 @@
 </div>
 <div class="col-md-4">
   <%= bar_chart Inventory.group(:name).count %>
-  <p>Since you'll more than likely to have <strong><%= link_to "Inventories", inventories_path %></strong> at the end of the month, we though might as well include it here.</p>
+  <p>Since you'll more than likely to have <strong><%= link_to "Inventories", new_inventory_path %></strong> at the end of the month, we though might as well include it here.</p>
 </div>
 <div class="col-md-4">
   <%= bar_chart Post.group(:title).group(:created_at).count %>
