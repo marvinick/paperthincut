@@ -4,6 +4,7 @@ class GoodsController < ApplicationController
 
   def index
     @goods = Good.order(:name)
+    @baskets = Basket.all
   end
 
   def new
