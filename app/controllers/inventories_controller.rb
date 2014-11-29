@@ -3,16 +3,14 @@ class InventoriesController < ApplicationController
   before_action :require_user, except: [:show, :index]
 
   def index
-    @inventories = Inventory.order(:created_at).reverse
+    @inventories = Inventory.order(:created_at)
   end
 
   def new
     @inventory = Inventory.new
-    @inventories = Inventory.order(:created_at).reverse
-  end
+    @inventories = Inventory.order(:created_at)
 
   def create
-
     @inventory = Inventory.new(inventory_params)
     if @inventory.save
       redirect_to new_inventory_path
