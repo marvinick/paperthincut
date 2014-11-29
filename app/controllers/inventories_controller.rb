@@ -9,8 +9,10 @@ class InventoriesController < ApplicationController
   def new
     @inventory = Inventory.new
     @inventories = Inventory.order(:created_at)
+  end
 
   def create
+
     @inventory = Inventory.new(inventory_params)
     if @inventory.save
       redirect_to new_inventory_path
