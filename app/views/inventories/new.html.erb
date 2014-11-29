@@ -1,19 +1,7 @@
 <div class="span5 well">
   <%= render 'form' %>
 </div>
-
-<div class="span5 well">
-<%= form_tag ('/inventories') do %>
- <% @inventories.each do |inventory| %>
- <table>
-    <tr>
-      <td><%= link_to inventory.name, inventory %> </td>
-      <td><%= inventory.amount %> </td>
-      <td><%= inventory.unit %> </td>
-    </tr>
-  </table>
-  <% end %>
-  <br/>
-<%= submit_tag "Send It!!", :name => 'email_button' %>
-<% end %>
+<%= render "inventory" %>
+<div class="span4 well">
+<%= submit_tag "Email", :name => 'email_button' %>
 </div>

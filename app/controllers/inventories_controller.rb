@@ -12,19 +12,16 @@ class InventoriesController < ApplicationController
   end
 
   def create
-    @inventory = Inventory.new(inventory_params)
 
+    @inventory = Inventory.new(inventory_params)
     if @inventory.save
-      AppMailer.send_inventory(@inventory).deliver
       redirect_to new_inventory_path
     else
       render :new
     end
   end
 
-  def show
-    @goods = Good.order(:name)
-  end
+  def show; end
 
   def edit; end
 
@@ -49,6 +46,6 @@ class InventoriesController < ApplicationController
   end
 
   def inventory_params
-    params.require(:inventory).permit(:name, :amount, :description, :unit, :price)
+    params.require(:inventory).permit(:name, :amount, :email, :description, :unit, :price)
   end
 end
