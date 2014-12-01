@@ -1,3 +1,11 @@
 <div class="span5 well">
-  <%= render 'inventories/inventory' %>
+  <% @inventories.each do |inventory| %>
+ <table>
+    <tr>
+      <td><%= inventory.name %> </td>
+      <td><%= inventory.amount %> </td>
+      <td><%= inventory.unit %> </td>
+    </tr>
+  </table>
+  <% end %>
 </div>
