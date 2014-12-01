@@ -3,6 +3,12 @@
 </div>
 <div class="span4 well">
 <table>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Unit</th>
+    <th>Price</th>
+  </tr>
   <% @inventories.each do |inventory| %>
     <tr>
       <td><%= link_to inventory.name, @inventory %> </td>

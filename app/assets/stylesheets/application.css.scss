@@ -16,21 +16,25 @@
  @import "bootstrap-responsive";
 
 table {
-  width: 275px;
+  width: 300px;
 }
 
  th, td {
-  padding: 7px 10px 10px 10px;
+  padding: 15px 10px 10px 10px;
+}
+
+td {
+  width: 10px;
 }
 
 th {
-  letter-spacing : 0.1em;
+  letter-spacing : 0.2em;
   font-size: 90%;
   text-align: left;
 }
 
-tr.even {
-  background-color: red;
+tr {
+  padding-top: 10px;
 }
 
 input[type=checkbox] {
