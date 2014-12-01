@@ -15,12 +15,22 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
- tr {
-  width: 50px; }
+table {
+  width: 275px;
+}
 
-td {
-  width: 75px;
-  height: 2px;
+ th, td {
+  padding: 7px 10px 10px 10px;
+}
+
+th {
+  letter-spacing : 0.1em;
+  font-size: 90%;
+  text-align: left;
+}
+
+tr.even {
+  background-color: red;
 }
 
 input[type=checkbox] {
@@ -41,10 +51,11 @@ form input[type='text'] {
  }
 
  body {
-  padding-left: 15px;
+  padding-left: 25px;
   background-color: #555555;
   padding-right: 25px;
   padding-top: 75px;
+  margin-bottom: 75px;
  }
 
  li {

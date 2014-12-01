@@ -1,10 +1,11 @@
-<div class="span5 well">
+<div class="span4 well">
  <table>
   <% @inventories.each do |inventory| %>
     <tr>
       <td><%= link_to inventory.name, @inventory %> </td>
       <td><%= inventory.amount %> </td>
       <td><%= inventory.unit %> </td>
+      <td><%= inventory.price %></td>
     </tr>
   <% end %>
   </table>
