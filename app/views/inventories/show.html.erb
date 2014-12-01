@@ -1,7 +1,4 @@
 <div class="span4 well">
-  <%= @inventory.name %>
-</div>
-<div class="span3 well">
-  <h5><%= link_to "Edit", edit_inventory_path %></h5>
+  <h4><li><%= link_to @inventory.name, edit_inventory_path %></li></h4>
   <em><%= link_to 'Delete', inventory_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
 </div>

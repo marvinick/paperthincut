@@ -15,7 +15,7 @@
 </div>
 <div class="col-md-4">
   <%= bar_chart Post.group(:title).group(:created_at).count %>
-  <p>Write your <strong><%= link_to "Notes", posts_path %></h4></strong> here. Just in case you make some changes or simply for future reminders.</p>
+  <p>Send in your <strong><%= link_to "Reports", posts_path %></h4></strong> here.</p>
 </div>
 <div class="col-md-4">
   <%= pie_chart User.group(:username).count %>

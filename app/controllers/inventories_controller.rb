@@ -12,11 +12,9 @@ class InventoriesController < ApplicationController
   end
 
   def create
-
     @inventory = Inventory.new(inventory_params)
     if @inventory.save
-      AppMailer.send_inventory(@inventory).deliver
-      redirect_to inventories_path
+      redirect_to new_inventory_path
     else
       render :new
     end

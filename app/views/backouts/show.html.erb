@@ -1,6 +1,10 @@
-<div class="span4 well">
- <h4><%= link_to @backout.month, edit_backout_path %></h4>
+<div class="span5 well">
+ <h4><%= @backout.month %></h4>
+ <font-color="blue"><p>Most of these items were thrown away because they were over prepped / spoiled</p></font>
+ <% if logged_in? %>
  <em><%= link_to 'Delete', backout_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+ <em><%= link_to "Edit", edit_backout_path %></em>
+ <% end %>
   <table>
   <tr>
     <td><%= @backout.item1 %></td>

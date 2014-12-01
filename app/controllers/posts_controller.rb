@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :require_user, except: [:index, :show]
 
   def index
-    @posts = Post.order(:title).reverse
+    @posts = Post.order(:created_at).reverse
   end
 
   def new
@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
+      AppMailer.send_report(@post).deliver
       redirect_to posts_path
     else
       render :new
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :email)
   end
 
 end
