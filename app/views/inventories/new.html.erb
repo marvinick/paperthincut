@@ -1,7 +1,17 @@
 <div class="span5 well">
   <%= render 'form' %>
 </div>
-<%= render "inventory" %>
+<div class="span5 well">
+  <% @inventories.each do |inventory| %>
+ <table>
+    <tr>
+      <td><%= link_to inventory.name, inventory %> </td>
+      <td><%= inventory.amount %> </td>
+      <td><%= inventory.unit %> </td>
+    </tr>
+  </table>
+  <% end %>
+</div>
 <div class="span4 well">
 <%= submit_tag "Email", :name => 'email_button' %>
 </div>

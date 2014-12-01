@@ -1,1 +1,11 @@
-<%= render 'inventories/inventory' %>
+<div class="span5 well">
+  <% @inventories.each do |inventory| %>
+ <table>
+    <tr>
+      <td><%= link_to inventory.name, inventory %> </td>
+      <td><%= inventory.amount %> </td>
+      <td><%= inventory.unit %> </td>
+    </tr>
+  </table>
+  <% end %>
+</div>
