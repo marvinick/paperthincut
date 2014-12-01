@@ -1,4 +1,4 @@
-<div class="span5 well">
+<div class="span4 well">
  <h4><%= @backout.month %></h4>
  <font-color="blue"><p>Most of these items were thrown away because they were over prepped / spoiled</p></font>
  <% if logged_in? %>
@@ -46,4 +46,7 @@
     <td><%= @backout.amount10 %></td>
   <tr>
 </table>
+</div>
+<div class="col-md-8">
+  <%= bar_chart Backout.group(:item1).count %>
 </div>
