@@ -23,7 +23,7 @@
 </div>
 
 <div class="col-md-4">
-  <%= pie_chart Good.group(:name).count %>
+  <%= column_chart Good.group(:name).count %>
   <p>Add your <%= link_to "Products", new_good_path %></h4> here. You can view, edit or delete them too.</p>
 </div>
 
