@@ -17,7 +17,7 @@
   </table>
 </div>
 <div class="span7 well">
-  <%= bar_chart Inventory.group(:name).group(:amount).count, height: "1200px" %>
+  <%= column_chart Inventory.group(:name).group(:amount).count, height: "1200px" %>
 </div>
 <br/>
 <div class="span4 well">
