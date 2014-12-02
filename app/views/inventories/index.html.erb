@@ -16,9 +16,10 @@
   <% end %>
   </table>
 </div>
-<div class="col-md-8">
-  <%= bar_chart Inventory.group(:amount).group(:name).count %>
+<div class="span7 well">
+  <%= pie_chart Inventory.group(:name).count %>
 </div>
+<br/>
 <div class="span4 well">
   <h4><%= link_to "New Inventory", new_inventory_path %></h4>
 </div>

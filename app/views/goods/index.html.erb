@@ -6,12 +6,12 @@
     <p>Only <strong><%= link_to "Order", distributors_path %></strong> from the list of the items that you want. You can also see <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
 </div>
 <div class="col-md-4">
-  <%= pie_chart Backout.group(:name).count %>
+  <%= pie_chart Backout.group(:item1).count %>
   <p>No inventory is complete without <strong><%= link_to "Backouts", backouts_path %></strong>. Make sure you count them right.<p>
 </div>
 <div class="col-md-4">
   <%= bar_chart Inventory.group(:name).count %>
-  <p>Nobody likes doing <strong><%= link_to "Inventories", new_inventory_path %></strong>, but someone has to do it.</p>
+  <p>Nobody likes doing <strong><%= link_to "Inventories", inventories_path %></strong>, but someone has to do it.</p>
 </div>
 <div class="col-md-4">
   <%= bar_chart Post.group(:title).group(:created_at).count %>
