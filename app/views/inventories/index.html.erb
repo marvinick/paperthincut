@@ -1,4 +1,4 @@
-<div class="span4 well">
+<div class="span5 well">
 <table>
   <tr>
     <th>Name</th>
@@ -16,7 +16,7 @@
   <% end %>
   </table>
 </div>
-<div class="span7 well">
+<div class="span6 well">
   <%= pie_chart Inventory.group(:name).count, height: "800px" %>
 </div>
 <br/>
