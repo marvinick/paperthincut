@@ -42,9 +42,6 @@
       }
     </script>
   <div id="chart_div"></div>
-</div>
-<div class="col-md-4">
-  <%= pie_chart Backout.group(:item1).count %>
   <p>No inventory is complete without <strong><%= link_to "Backouts", backouts_path %></strong>. Make sure you count them right.<p>
 </div>
 <div class="col-md-4">
