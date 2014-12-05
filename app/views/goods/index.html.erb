@@ -1,9 +1,47 @@
-<div class="col-md-12">
-  <center><h3><strong>"//paprthin</strong>. <em>order. backout. and inventory."</em><h3></center>
-</div>
 <div class="col-md-4">
   <%= pie_chart Request.group(:created_at).count %>
     <p>Only <strong><%= link_to "Order", distributors_path %></strong> from the list of the items that you want. You can also see <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
+</div>
+<div class="col-md-4">
+  <center><h1><strong>"//paprthin</strong>. <em>order. backout.inventory."</em><h1></center>
+</div>
+<div class="col-md-4">
+  <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Items');
+        data.addColumn('number', 'Amount');
+        data.addRows([
+          ['Rice', 35],
+          ['Avocado', 3],
+          ['Cucumber', 5],
+          ['Scallions', 2],
+          ['Jalapeno', 1]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Backouts November 2014 (in lbs)',
+                       'width':500,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  <div id="chart_div"></div>
 </div>
 <div class="col-md-4">
   <%= pie_chart Backout.group(:item1).count %>
@@ -25,44 +63,5 @@
 <div class="col-md-4">
   <%= column_chart Good.group(:name).count %>
   <p>Add your <%= link_to "Products", new_good_path %></h4> here. You can view, edit or delete them too.</p>
-</div>
-
-<div class="col-md-6">
-  <script type="text/javascript">
-
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Styles');
-        data.addColumn('number', 'Amount');
-        data.addRows([
-          ['Bacon', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Tuna', 1],
-          ['Pepperoni', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'This is just a demo using Google Chart',
-                       'width':700,
-                       'height':700};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-<div id="chart_div"></div>
 </div>
 
