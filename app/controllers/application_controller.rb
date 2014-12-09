@@ -19,9 +19,4 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
-
-  def send_inventory(inventory)
-    @inventories = inventory
-    mail to: @inventory.email, from: "marvin8214@gmail.com", subject: "Last Month Sushi Bar Inventory - ITRBA"
-  end
 end
