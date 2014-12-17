@@ -6,8 +6,8 @@
      <%= f.text_field :name %>
   </div>
   <div class="control-group">
-    <%= f.label :distributor_id %><br />
-    <%= f.collection_select :distributor_id, Distributor.all, :id, :email, include_blank: true %>
+     <%= f.label :email %>
+     <%= f.text_field :email %>
   </div>
   <br/>
   <div class="control-group">
