@@ -31,6 +31,7 @@ gem 'newrelic_rpm'
 gem 'angularjs-rails'
 gem 'turbolinks'
 gem 'carrierwave'
+gem "rmagick"
 
 group :doc do
   gem 'sdoc', require: false
