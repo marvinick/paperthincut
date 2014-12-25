@@ -30,6 +30,7 @@ gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'angularjs-rails'
 gem 'turbolinks'
+gem 'carrierwave'
 
 group :doc do
   gem 'sdoc', require: false

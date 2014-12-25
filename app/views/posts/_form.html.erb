@@ -1,5 +1,5 @@
 <div class="col-md-6">
-  <%= form_for @post do |f| %>
+  <%= form_for @post, :html => {:multipart => true} do |f| %>
     <div class="control-group">
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -7,6 +7,9 @@
     <div class="control-group">
       <%= f.label :email %>
       <%= f.text_field :email %>
+    </div>
+    <div>
+     <%= f.file_field :image %>
     </div>
     <%= f.submit "Submit", class: 'btn btn-success' %>
   <% end %>
