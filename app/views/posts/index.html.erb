@@ -1,12 +1,13 @@
-<div class="span5 well">
+<div class="col-md-6">
   <h3>Messages</h3>
+  <em><h5><%= link_to "New ", new_post_path %></h5></em>
   <br/>
   <% @posts.each do |post| %>
-
-  <ul>
-    <li><%= link_to post.title, post %></li>
-  </ul>
+    <div class="col-md-6">
+      <%= content_tag_for :dt, post do %>
+      <%= link_to post.title, post %>
+      <%= image_tag post.image_url.to_s %>
+      <% end %>
+    </div>
   <% end %>
-  <hr>
-  <%= link_to "New Message", new_post_path %>
 </div>
