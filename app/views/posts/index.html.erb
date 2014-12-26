@@ -2,7 +2,7 @@
   <h3>Messages</h3>
   <br/>
   <% @posts.each do |post| %>
-  <%= image_tag post.image_url(:thumb).to_s %>
+
   <ul>
     <li><%= link_to post.title, post %></li>
   </ul>
