@@ -32,6 +32,8 @@ gem 'angularjs-rails'
 gem 'turbolinks'
 gem 'carrierwave'
 gem "rmagick"
+gem "fog"
+gem "carrierwave_direct"
 
 group :doc do
   gem 'sdoc', require: false
