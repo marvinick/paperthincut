@@ -14,17 +14,16 @@
   <body>
     <div id="sticky">
       <div class="nav">
-        <ul class="pull-left">
-          <strong><li><%= link_to "//paprthin", root_path %></li></strong>
-          <% if logged_in? %>
-          <li>
-            <%= link_to 'Log Out', logout_path %>
-          </li>
-
-          <% else %>
-          <li><%= link_to 'Log in', login_path %></li>
+        <%= nav_bar :static => :top, :responsive => true, :brand => "//paprthin", :brand_link => root_path do %>
+          <%= menu_group do %>
+            <%= menu_divider %>
+              <% if logged_in? %>
+                <%= menu_item 'Log Out', logout_path %>
+              <% else %>
+              <%= menu_item 'Log in', login_path %>
+              <% end %>
           <% end %>
-        </ul>
+        <% end %>
       </div>
     </div>
     <%= yield %>
