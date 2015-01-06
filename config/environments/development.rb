@@ -30,4 +30,5 @@ Paperthincut::Application.configure do
   config.assets.debug = true
 
   config.assets.precompile = ['static_pages.css']
+
 end

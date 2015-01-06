@@ -18,6 +18,7 @@ class RequestsController < ApplicationController
   end
 
   def create
+
     @request = Request.new(request_params)
     @request.add_items_from_basket(@basket)
 

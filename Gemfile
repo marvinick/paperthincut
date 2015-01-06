@@ -34,6 +34,7 @@ gem 'carrierwave'
 gem "rmagick"
 gem "fog"
 gem "carrierwave_direct"
+gem 'textmagic', '~> 0.6'
 
 group :doc do
   gem 'sdoc', require: false
