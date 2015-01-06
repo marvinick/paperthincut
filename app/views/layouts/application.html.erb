@@ -9,17 +9,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
       <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
       <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-
   </head>
   <body>
     <div id="sticky">
       <div class="nav">
-        <li><%= link_to "paprthin", root_path %></li>
-          <% if logged_in? %>
-            <li><%= link_to 'Log Out', logout_path %></li>
-          <% else %>
-            <li><%= link_to 'Log in', login_path %></li>
-          <% end %>
+        <div class="container">
+          <div class="row">
+            <ul class="pull-left">
+              <li>
+              <%= link_to "//paprthin", root_path, :class => 'brand' %>
+              </li>
+            </ul>
+            <ul class="pull-right">
+              <% if logged_in? %>
+              <%= link_to "sign Out", logout_path %>
+              <% else %>
+              <%= link_to "sign in", login_path  %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <%= yield %>
