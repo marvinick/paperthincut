@@ -22,7 +22,6 @@ gem 'groupdate', '~> 2.1.1'
 gem 'active_median', '~> 0.1.0'
 gem 'hightop'
 gem 'taps'
-gem 'lunchy'
 gem 'fabrication'
 gem 'faker'
 gem 'bcrypt-ruby', '~> 3.1.2'
@@ -35,6 +34,7 @@ gem "rmagick"
 gem "fog"
 gem "carrierwave_direct"
 gem 'textmagic', '~> 0.6'
+gem 'font-awesome-sass', '~> 4.2.0'
 
 group :doc do
   gem 'sdoc', require: false
