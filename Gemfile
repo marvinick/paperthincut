@@ -36,6 +36,7 @@ gem "carrierwave_direct"
 gem 'textmagic', '~> 0.6'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'roo'
+gem "cocoon"
 
 group :doc do
   gem 'sdoc', require: false
