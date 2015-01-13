@@ -1,8 +1,5 @@
 class Backout < ActiveRecord::Base
+  validates :month, presence: true
   validates :item1, presence: true
   validates :amount1, presence: true
-  validates :item2, presence: true
-  validates :amount2, presence: true
-  validates :item3, presence: true
-  validates :amount3, presence: true
 end
