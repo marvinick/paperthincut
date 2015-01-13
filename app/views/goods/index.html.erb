@@ -6,42 +6,7 @@
     <p>Only <strong><%= link_to "Order", distributors_path %></strong> from the list of the items that you want. You can also see <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
 </div>
 <div class="col-md-4">
-  <script type="text/javascript">
-
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Items');
-        data.addColumn('number', 'Amount');
-        data.addRows([
-          ['Rice', 21],
-          ['Avocado', 3],
-          ['Cucumber', 5],
-          ['Yellowtail', 1],
-          ['Blackened Tuna', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'Backouts December 2014 (in lbs - WIP)',
-                       'width':300,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-  <div id="chart_div"></div>
+  <%= pie_chart Backout.group(:month).count %>
   <p>No inventory is complete without <strong><%= link_to "Backouts", backouts_path %></strong>. Make sure you count them right.<p>
 </div>
 <div class="col-md-4">
