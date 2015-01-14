@@ -1,87 +1,49 @@
-<div class="span4 well">
+<div class="span5 well">
  <h4><%= @backout.month %></h4>
- <font-color="blue"><p>Most of these items were thrown away because they were over prepped / spoiled</p></font>
+ <p>Most of these items were thrown away because they were over prepped / spoiled</p>
  <% if logged_in? %>
- <em><%= link_to 'Delete', backout_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
- <em><%= link_to "Edit", edit_backout_path %></em>
+   <em><%= link_to 'Delete', backout_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+   <em><%= link_to "Edit", edit_backout_path %></em>
  <% end %>
   <table>
-  <tr>
-    <td><%= @backout.item1 %></td>
-    <td><%= @backout.amount1 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item2 %></td>
-    <td><%= @backout.amount2 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item3 %></td>
-    <td><%= @backout.amount3 %></td>
-  <tr>
-    <td><%= @backout.item4 %></td>
-    <td><%= @backout.amount4 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item5 %></td>
-    <td><%= @backout.amount5 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item6 %></td>
-    <td><%= @backout.amount6 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item7 %></td>
-    <td><%= @backout.amount7 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item8 %></td>
-    <td><%= @backout.amount8 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item9 %></td>
-    <td><%= @backout.amount9 %></td>
-  </tr>
-  <tr>
-    <td><%= @backout.item10 %></td>
-    <td><%= @backout.amount10 %></td>
-  <tr>
-</table>
-</div>
-<div class="col-md-6">
-  <script type="text/javascript">
-
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Items');
-        data.addColumn('number', 'Amount');
-        data.addRows([
-          ['Rice', 21],
-          ['Avocado', 3],
-          ['Cucumber', 5],
-          ['Yellowtail', 1],
-          ['Blackened Tuna', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'Backouts December 2014 (in lbs)',
-                       'width':500,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-  <div id="chart_div"></div>
+    <tr>
+      <td><%= @backout.item1 %></td>
+      <td><%= @backout.amount1 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item2 %></td>
+      <td><%= @backout.amount2 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item3 %></td>
+      <td><%= @backout.amount3 %></td>
+    <tr>
+      <td><%= @backout.item4 %></td>
+      <td><%= @backout.amount4 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item5 %></td>
+      <td><%= @backout.amount5 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item6 %></td>
+      <td><%= @backout.amount6 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item7 %></td>
+      <td><%= @backout.amount7 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item8 %></td>
+      <td><%= @backout.amount8 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item9 %></td>
+      <td><%= @backout.amount9 %></td>
+    </tr>
+    <tr>
+      <td><%= @backout.item10 %></td>
+      <td><%= @backout.amount10 %></td>
+    <tr>
+  </table>
 </div>

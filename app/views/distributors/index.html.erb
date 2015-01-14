@@ -5,7 +5,9 @@
     <h4><li><%= link_to distributor.name, distributor %></li></h4>
   <% end %>
   <hr>
-  <%= link_to "Add Distributor", new_distributor_path(@distributor) %>
+  <% if logged_in? %>
+    <%= link_to "Add Distributor", new_distributor_path(@distributor) %>
+  <% end %>
 </div>
 <div class="span5 well">
   <h4>Products</h4>

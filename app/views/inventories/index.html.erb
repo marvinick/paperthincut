@@ -20,6 +20,8 @@
   <%= pie_chart Inventory.group(:name).count, height: "800px" %>
 </div>
 <br/>
-<div class="span4 well">
-  <h4><%= link_to "New Inventory", new_inventory_path %></h4>
-</div>
+<% if logged_in? %>
+  <div class="span4 well">
+    <h4><%= link_to "New Inventory", new_inventory_path %></h4>
+  </div>
+<% end %>

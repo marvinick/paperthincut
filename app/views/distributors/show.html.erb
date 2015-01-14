@@ -1,10 +1,12 @@
-<div class="order" ng-controller=singleOrderCtrl>
+<div class="order">
   <div class="span3 well">
     <h3><li><%= @distributor.name %></li></h3>
     <li><%= @distributor.description %></li>
     <br/>
-    <%= link_to "Edit", edit_distributor_path %>
-    <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if logged_in? %>
+      <%= link_to "Edit", edit_distributor_path %>
+      <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </div>
 
   <div class="span3 well">
