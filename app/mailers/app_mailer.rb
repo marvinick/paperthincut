@@ -3,7 +3,7 @@ class AppMailer < ActionMailer::Base
     @request = request
     mail to: @request.email,
          cc: "marvin8214@gmail.com",
-        from: "marvkiluw@gmail.com", subject: "Order from Marvin - In The Raw Broken Arrow"
+        from: "marvkiluw@gmail.com", subject: "In The Raw Broken Arrow - Marvin"
   end
 
   def send_report(post)
