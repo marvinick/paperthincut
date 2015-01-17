@@ -19,7 +19,22 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def show
+  def show; end
+
+  def edit; end
+
+  def update
+    if @appointment.update(appointment_params)
+      redirect_to appointments_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @appointment.destroy
+    redirect_to appointments_path
+  end
 
   private
 
