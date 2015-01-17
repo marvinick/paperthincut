@@ -10,6 +10,7 @@ Paperthincut::Application.routes.draw do
   resources :goods
   resources :appointments
   resources :backouts
+  resources :logs
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
