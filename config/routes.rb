@@ -1,4 +1,5 @@
 Paperthincut::Application.routes.draw do
+  root to: "goods#index"
   resources :items
   resources :baskets
   resources :posts
@@ -7,7 +8,7 @@ Paperthincut::Application.routes.draw do
   resources :users
   resources :inventories
   resources :goods
-  root to: "goods#index"
+  resources :appointments
   resources :backouts
 
   get '/login', to: 'sessions#new'
