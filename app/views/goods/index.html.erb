@@ -26,5 +26,9 @@
   <%= column_chart Good.group(:name).count %>
   <p>Add your <%= link_to "Products", new_good_path %></h4> here. You can view, edit or delete them too.</p>
 </div>
+<div class="col-md-4">
+  <%= column_chart Log.group(:event).count %>
+  <p>Important events that you need to <%= link_to "Log", logs_path %></h4> ? You can add and review them here for future imporvements around the restaurant.</p>
+</div>
 
 

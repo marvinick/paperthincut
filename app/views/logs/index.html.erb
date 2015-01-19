@@ -1,6 +1,5 @@
 <div class="span5 well">
   <% @logs.each do |log| %>
-    <%= log.event %>
-    <%= log.description %>
+    <li><%= link_to log.event, log %></li>
   <% end %>
 </div>
