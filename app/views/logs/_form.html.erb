@@ -1,0 +1,11 @@
+<%= form_for @log do |f| %>
+  <div class="control-group">
+  <%= f.label :event %>
+  <%= f.text_field :event, placeholder: "What is it about?" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit "Submit", class: 'btn btn-success' %>
+<% end %>

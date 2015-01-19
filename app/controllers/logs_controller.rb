@@ -1,5 +1,5 @@
 class LogsController < ApplicationController
-  before_action :set_log, only: (:show, :edit, :update, :destroy)
+  before_action :set_log, only: [:show, :edit, :update, :destroy]
 
   def index
     @logs = Log.all
@@ -43,6 +43,6 @@ class LogsController < ApplicationController
   end
 
   def log_params
-    param.require(:log).permit(:description, :event)
+    params.require(:log).permit(:description, :event)
   end
 end
