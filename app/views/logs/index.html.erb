@@ -2,4 +2,5 @@
   <% @logs.each do |log| %>
     <li><%= link_to log.event, log %></li>
   <% end %>
+  <em><%= link_to "New", new_log_path %></em>
 </div>
