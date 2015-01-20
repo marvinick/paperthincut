@@ -2,5 +2,7 @@
   <% @logs.each do |log| %>
     <li><%= link_to log.event, log %></li>
   <% end %>
-  <em><%= link_to "New", new_log_path %></em>
+  <% if logged_in? %>
+    <em><%= link_to "New", new_log_path %></em>
+  <% end %>
 </div>
