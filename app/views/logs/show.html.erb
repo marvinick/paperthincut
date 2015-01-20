@@ -1,6 +1,7 @@
 <div class="span5 well">
   <h4><li><%= @log.event %></li></h4>
   <li><%= @log.description %></li>
+  <li><%= @log.created_at %></li>
   <% if logged_in? %>
     <%= link_to "Edit", edit_log_path %>
   <% end %>
