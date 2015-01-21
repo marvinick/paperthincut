@@ -1,7 +1,7 @@
 <div class="span5 well">
   <% @logs.each do |log| %>
     <li><%= link_to log.event, log %></li>
-    <li><%= log.created_at %></li>
+    <em><li><%= log.created_at %></li></em>
   <% end %>
   <% if logged_in? %>
     <em><%= link_to "New", new_log_path %></em>
