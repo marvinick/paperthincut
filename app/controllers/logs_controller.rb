@@ -1,5 +1,6 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
 
   def index
     @logs = Log.all
