@@ -4,6 +4,7 @@
   <em><li><%= @log.created_at %></li></em>
   <% if logged_in? %>
     <%= link_to "Edit", edit_log_path %>
+    <hr>
     <%= link_to 'Delete', @log, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
   <% end %>
 </div>

@@ -167,9 +167,6 @@ GEM
     hightop (0.1.2)
       activerecord
     hike (1.2.3)
-    httparty (0.13.3)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     inflecto (0.0.2)
     ipaddress (0.8.0)
@@ -204,7 +201,6 @@ GEM
     mini_portile (0.6.2)
     minitest (4.7.5)
     multi_json (1.10.1)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -316,8 +312,6 @@ GEM
       rest-client (>= 1.4.0, < 1.7.0)
       sequel (~> 3.20.0)
       sinatra (~> 1.0.0)
-    textmagic (0.6.0)
-      httparty (~> 0.5)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -400,7 +394,6 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   taps
-  textmagic (~> 0.6)
   therubyracer
   turbolinks
   twitter-bootstrap-rails
