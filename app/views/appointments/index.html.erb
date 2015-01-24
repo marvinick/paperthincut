@@ -1,5 +1,6 @@
 <div class="span4 well">
   <% @appointments.each do |appointment| %>
-    <%= appointment.chef %>
+    <li><%= appointment.chef %></li>
   <% end %>
+  <em><%= link_to "New", new_appointment_path %></em>
 </div>

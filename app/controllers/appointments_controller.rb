@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :destroy, :edit, :update]
+  before_action :require_user, except: [:index, :show]
 
   def index
     @appointments = Appointment.all
@@ -43,6 +44,6 @@ class AppointmentsController < ApplicationController
   end
 
   def appointment_params
-    param.require(:appointment).permit(:chef, :costumer)
+    param.require(:appointment).permit(:chef, :costumer, :background)
   end
 end

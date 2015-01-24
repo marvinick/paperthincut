@@ -1,4 +1,10 @@
 <%= form_for @appointment do |f| %>
-  <%= f.label :chef %>
-  <%= f.text_field :chef %>
-  <% end %>
+  <div class="control-group">
+    <%= f.label :chef %>
+    <%= f.text_field :chef %>
+  </div>
+  <div class="control-group">
+    <%= f.label :background %>
+    <%= f.text_area :background %>
+  </div>
+<% end %>
