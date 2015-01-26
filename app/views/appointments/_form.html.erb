@@ -7,4 +7,11 @@
     <%= f.label :background %>
     <%= f.text_area :background %>
   </div>
+  <div>
+   <%= f.file_field :image %>
+  </div>
+  <div>
+   <%= f.label :remote_image_url, "or image URL" %>
+   <%= f.text_field :remote_image_url %>
+  </div>
 <% end %>
