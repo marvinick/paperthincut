@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <center><h3><strong>"//paprthin</strong>.<em>order. backout.inventory.and....drama"</em><h3></center>
+  <center><h3><strong><em>//order.backout.inventory//</em></strong><h3></center>
 </div>
 <hr>
 <div class="col-md-6">
@@ -29,7 +29,7 @@
   <p>Add your <%= link_to "Products", new_good_path %></h4> here. You can view, edit or delete them too.</p>
 </div>
 <div class="col-md-4">
-  <%= column_chart Log.group(:event).count %>
+  <%= pie_chart Log.group(:name).count %>
   <p>Important events that you need to <%= link_to "Log", logs_path %></h4> ? You can add and review them here for future imporvements around the restaurant.</p>
 </div>
 <div class="col-md-4">
