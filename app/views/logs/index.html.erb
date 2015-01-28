@@ -1,13 +1,15 @@
 <div class="span4 well">
   <% @logs.each do |log| %>
     <li><%= link_to log.event, log %></li>
+    <li><%= log.name %></li>
     <em><li><%= log.created_at %></li></em>
   <% end %>
   <% if logged_in? %>
     <em><%= link_to "New", new_log_path %></em>
   <% end %>
 </div>
-
-<div class="col-md-8">
-  <%= pie_chart Log.group(:event).count %>
+<div class="span7 well">
+  <h4>Chart shows who initiated the event</h4>
+  <%= pie_chart Log.group(:name).count %>
 </div>
+
