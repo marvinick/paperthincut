@@ -12,9 +12,6 @@ gem "less-rails"
 gem "therubyracer"
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "rails_serve_static_assets"
-gem 'omniauth'
-gem 'devise'
-gem 'omniauth-twitter'
 gem 'uuidtools'
 gem 'koala'
 gem "chartkick"
@@ -34,8 +31,6 @@ gem "rmagick"
 gem "fog"
 gem "carrierwave_direct"
 gem 'font-awesome-sass', '~> 4.2.0'
-gem 'roo'
-gem "cocoon"
 
 group :doc do
   gem 'sdoc', require: false
