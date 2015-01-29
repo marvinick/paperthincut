@@ -9,7 +9,9 @@ Paperthincut::Application.routes.draw do
   resources :inventories
   resources :goods
   resources :appointments
-  resources :backouts
+  resources :backouts do
+    resources :responds, only: [:create]
+  end
   resources :logs
 
   get '/login', to: 'sessions#new'

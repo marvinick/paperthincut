@@ -19,7 +19,9 @@ class BackoutsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @respond = Respond.new
+  end
 
   def edit; end
 
