@@ -277,6 +277,9 @@ GEM
     sequel (3.20.0)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sinatra (1.0)
       rack (>= 1.0)
     sprockets (2.12.3)
@@ -367,6 +370,7 @@ DEPENDENCIES
   sdoc
   selenium-webdriver
   shoulda-matchers
+  simple_form
   taps
   therubyracer
   turbolinks

@@ -21,7 +21,6 @@ class GoodsController < ApplicationController
   end
 
   def edit
-    @good = Good.all
   end
 
   def update

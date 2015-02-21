@@ -31,6 +31,7 @@ gem "rmagick"
 gem "fog"
 gem "carrierwave_direct"
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'simple_form'
 
 group :doc do
   gem 'sdoc', require: false
