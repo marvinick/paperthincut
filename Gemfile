@@ -32,6 +32,7 @@ gem "fog"
 gem "carrierwave_direct"
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
+gem 'dotenv-rails'
 
 group :doc do
   gem 'sdoc', require: false
