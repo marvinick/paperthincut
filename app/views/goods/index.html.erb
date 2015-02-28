@@ -33,7 +33,7 @@
   <p>Important events that you need to <%= link_to "Log", logs_path %></h4> ? You can add and review them here for future imporvements around the restaurant.</p>
 </div>
 <div class="col-md-4">
-  <%= column_chart Appointment.group(:chef).count %>
-  <p>Give your costumers personal experience. Make sure you're working when they are visiting <%= link_to "Appointment", appointments_path %></h4></p>
+  <%= column_chart Calendar.group(:month).count %>
+  <p>Give your costumers personal experience. Make sure you're working when they are visiting <%= link_to "Calendars", new_calendar_path %></h4></p>
 </div>
 
