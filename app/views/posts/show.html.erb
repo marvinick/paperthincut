@@ -1,7 +1,6 @@
 <div class="span5 well">
   <h4><%= @post.title %></h4>
   <%= @post.content %>
-  <%= image_tag @post.image_url.to_s %>
   <br/>
   <% if logged_in? %>
     <%= link_to 'Edit', edit_post_path(@post) %>

@@ -6,10 +6,7 @@
   <br/>
   <% @posts.each do |post| %>
     <div class="col-md-6">
-      <%= content_tag_for :dt, post do %>
       <%= link_to post.title, post %>
-      <%= image_tag post.image_url.to_s %>
-      <% end %>
     </div>
   <% end %>
 </div>
