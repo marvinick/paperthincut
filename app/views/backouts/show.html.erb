@@ -1,16 +1,5 @@
 <div class="span5 well">
  <h4><%= @backout.month %></h4>
-  <%= form_for [@backout, @respond] do |f| %>
-   <div class="control-group">
-    <%= f.label :respond %>
-    <%= f.text_area :body %>
-   </div>
-   <%= f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
-  <h5>Respond:</h5>
-<% @backout.responds.reload.each do |respond| %>
-  <%= render 'responds/respond', respond: respond %>
-<% end %>
  <p>Most of these items were thrown away because they were over prepped / spoiled</p>
  <% if logged_in? %>
    <em><%= link_to 'Delete', backout_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
