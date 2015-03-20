@@ -1,5 +1,7 @@
 <div class="span5 well">
-<h3 style="text-align:center;">February 2015</h3>
+
+<h3 style="text-align:center;">Last Month's Inventory</h3>
+
 <hr>
 <table >
   <tr>
@@ -8,7 +10,7 @@
     <th>Unit</th>
     <th>Price</th>
   </tr>
-  <% @inventories.each do |inventory| %>
+<% @inventories.each do |inventory| %>
     <tr>
       <td><%= link_to inventory.name, @inventory %> </td>
       <td><%= inventory.amount %> </td>
@@ -18,12 +20,12 @@
   <% end %>
   </table>
 </div>
-<div class="span6 well">
+<div class="span7 well">
   <%= pie_chart Inventory.group(:name).count, height: "800px" %>
 </div>
 <br/>
 <% if logged_in? %>
   <div class="span4 well">
-    <h4><%= link_to "New Inventory", new_inventory_path %></h4>
+    <h4><%= link_to "New Item", new_inventory_path %></h4>
   </div>
 <% end %>
