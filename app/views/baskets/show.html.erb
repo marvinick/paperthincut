@@ -9,7 +9,7 @@
      <li><%= item.amount %> <%= item.good.unit %> of <%= item.good.name %></li>
     <% end %>
     <br/>
-    <li><%= link_to 'select more', :back %></li>
+    <li><%= link_to 'Select more', :back %></li>
   </ul>
   <br/>
   <%= button_to "Empty Basket", @basket, method: :delete, data: { confirm: 'Are you sure?' } %>
