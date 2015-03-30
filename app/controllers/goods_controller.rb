@@ -36,10 +36,7 @@ class GoodsController < ApplicationController
 
   def destroy
     @good.destroy
-    respond_to do |format|
-      format.html { redirect_to goods_url }
-      format.json { head :no_content }
-    end
+    redirect_to goods_path
   end
 
   private
