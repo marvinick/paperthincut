@@ -1,31 +1,28 @@
-<div class="span5 well">
-
-<h3 style="text-align:center;">Last Month's Inventory</h3>
-
+<h3 class="text-center">Last Month's Inventory</h3>
 <hr>
-<table >
-  <tr>
-    <th>Name</th>
-    <th>Amount</th>
-    <th>Unit</th>
-    <th>Price</th>
-  </tr>
-<% @inventories.each do |inventory| %>
-    <tr>
-      <td><%= link_to inventory.name, inventory %> </td>
-      <td><%= inventory.amount %> </td>
-      <td><%= inventory.unit %> </td>
-      <td><%= inventory.price %></td>
-    </tr>
-  <% end %>
-  </table>
-</div>
-<div class="span7 well">
-  <%= pie_chart Inventory.group(:name).count, height: "800px" %>
-</div>
-<br/>
+<center>
+  <div class="col-md-12">
+    <table >
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Unit</th>
+        <th>Price</th>
+      </tr>
+    <% @inventories.each do |inventory| %>
+        <tr>
+          <td><%= link_to inventory.name, inventory %> </td>
+          <td><%= inventory.amount %> </td>
+          <td><%= inventory.unit %> </td>
+          <td><%= inventory.price %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</center>
+
 <% if logged_in? %>
-  <div class="span4 well">
+  <div class="col-md-4">
     <h4><%= link_to "New Item", new_inventory_path %></h4>
   </div>
 <% end %>

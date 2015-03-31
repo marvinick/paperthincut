@@ -1,11 +1,14 @@
-<div class="span4 well">
-  <h4>Backouts:</h4>
-  <div class="col-md-4">
-    <% @backouts.each do |backout| %>
-    <li><h4><%= link_to backout.month, backout %></h4></li>
-    <% end %>
+<center>
+  <div class="col-md-12">
+    <h4>Backouts:</h4>
+    <hr>
+      <% @backouts.each do |backout| %>
+      <li><h4><%= link_to backout.month, backout %></h4></li>
+      <% end %>
   </div>
-</div>
+</center>
+<% if logged_in? %>
 <div class="col-md-4">
   <h4><%= link_to "Add Backout", new_backout_path %></h4>
 </div>
+<% end %>

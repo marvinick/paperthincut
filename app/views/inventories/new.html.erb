@@ -1,21 +1,9 @@
-<div class="span4 well">
-  <%= render 'form' %>
-</div>
-<div class="span4 well">
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Amount</th>
-    <th>Unit</th>
-    <th>Price</th>
-  </tr>
-  <% @inventories.each do |inventory| %>
-    <tr>
-      <td><%= link_to inventory.name, inventory %> </td>
-      <td><%= inventory.amount %> </td>
-      <td><%= inventory.unit %> </td>
-      <td><%= inventory.price %></td>
-    </tr>
+<div class="span5 well">
+  <%= form_for @inventory do |f| %>
+    <div class="control-group">
+      <%= f.label :month %>
+      <%= f.text_field :month %>
+    </div>
+   <%= f.submit "Submit", class: "btn btn-success" %>
   <% end %>
-  </table>
 </div>

@@ -3,26 +3,30 @@ class InventoriesController < ApplicationController
   before_action :require_user, except: [:show, :index]
 
   def index
-    @inventories = Inventory.order(:created_at)
+    @inventories = Inventory.all
   end
 
   def new
     @inventory = Inventory.new
-    @inventories = Inventory.order(:created_at)
   end
 
   def create
     @inventory = Inventory.new(inventory_params)
+
     if @inventory.save
-      redirect_to new_inventory_path
+      redirect_to inventories_path
     else
       render :new
     end
   end
 
-  def show; end
+  def show
+    @inventories = Inventory.all
+  end
 
-  def edit; end
+  def edit
+
+  end
 
   def update
     if @inventory.update(inventory_params)
@@ -44,6 +48,6 @@ class InventoriesController < ApplicationController
   end
 
   def inventory_params
-    params.require(:inventory).permit(:name, :amount, :email, :description, :unit, :price)
+    params.require(:inventory).permit(:name, :amount, :description, :unit, :price, :month)
   end
 end

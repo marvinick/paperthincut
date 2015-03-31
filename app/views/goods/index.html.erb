@@ -15,13 +15,6 @@
   <%= bar_chart Inventory.group(:name).count %>
   <p>Nobody likes doing <strong><%= link_to "Inventories", inventories_path %></strong>, but someone has to do it.</p>
 </div>
-<div class="col-md-4">
-  <%= bar_chart Post.group(:title).group(:created_at).count %>
-  <p>Send in your <strong><%= link_to "Reports", posts_path %></h4></strong> here.</p>
-</div>
-<div class="col-md-4">
-  <%= pie_chart Log.group(:name).count %>
-  <p>Important events that you need to <%= link_to "Log", logs_path %></h4> ? You can add and review them here for future imporvements.</p>
-</div>
+
 
 
