@@ -33,6 +33,7 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'd3-rails'
 
 group :doc do
   gem 'sdoc', require: false
