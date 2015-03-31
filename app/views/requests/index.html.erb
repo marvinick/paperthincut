@@ -1,11 +1,16 @@
-<div class="span8 well">
-  <%= pie_chart Request.group(:name).count %>
+<h3 class="text-center">Order History</h3>
+<hr>
+<div class="col-md-12">
+  <%= line_chart Request.group(:name, :created_at).count %>
 </div>
-<div class="span5 well">
-  <% @requests.each do  |request| %>
-  <ul>
-    <li><%= link_to request.name, request %></li>
-    <li><%= request.created_at %></li>
-  </ul>
-  <% end %>
-</div>
+
+  <div class="col-md-12">
+    <center>
+    <% @requests.each do  |request| %>
+    <ul>
+      <li><%= link_to request.name, request %></li>
+      <li><%= request.created_at %></li>
+    </ul>
+    <% end %>
+    </center>
+  </div>

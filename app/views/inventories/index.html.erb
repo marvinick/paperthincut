@@ -1,7 +1,11 @@
+
 <h3 class="text-center">Last Month's Inventory</h3>
+<div class="col-md-12">
+  <%= column_chart Inventory.group(:name, :amount).count %>
+</div>
 <hr>
 <center>
-  <div class="col-md-12">
+  <div class="col-md-8">
     <table >
       <tr>
         <th>Name</th>
@@ -20,7 +24,6 @@
     </table>
   </div>
 </center>
-
 <% if logged_in? %>
   <div class="col-md-4">
     <h4><%= link_to "New Item", new_inventory_path %></h4>

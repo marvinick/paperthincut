@@ -6,7 +6,8 @@
   <% end %>
   <hr>
   <% if logged_in? %>
-    <%= link_to "Add Distributor", new_distributor_path(@distributor) %>
+    <li><%= link_to "Distributor", new_distributor_path(@distributor) %></li>
+    <li><%= link_to "Products", new_good_path %></li>
   <% end %>
 </div>
 <div class="span5 well">

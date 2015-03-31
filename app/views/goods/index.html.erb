@@ -3,16 +3,15 @@
 </div>
 <hr>
 <div class="col-md-4">
-  <%= pie_chart Request.group(:created_at).count %>
+  <%= line_chart Request.group(:name, :created_at).count %>
     <p>Only <strong><%= link_to "Order", distributors_path %></strong> from the list of the items that you want. You can also see <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
 </div>
-<hr>
 <div class="col-md-4">
-  <%= pie_chart Backout.group(:month).count %>
+  <%= pie_chart Backout.group(:month, :item1, :amount1, :item2, :amount2, :item3, :amount3).count %>
   <p>No inventory is complete without <strong><%= link_to "Backouts", backouts_path %></strong>. Make sure you count them right.<p>
 </div>
 <div class="col-md-4">
-  <%= bar_chart Inventory.group(:name).count %>
+  <%= column_chart Inventory.group(:name, :amount).count %>
   <p>Nobody likes doing <strong><%= link_to "Inventories", inventories_path %></strong>, but someone has to do it.</p>
 </div>
 

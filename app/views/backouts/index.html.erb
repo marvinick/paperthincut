@@ -3,12 +3,13 @@
     <h4>Backouts:</h4>
     <hr>
       <% @backouts.each do |backout| %>
-      <li><h4><%= link_to backout.month, backout %></h4></li>
+      <li><h3><%= link_to backout.month, backout %></h3></li>
       <% end %>
+      <em><%= link_to "Add Backout", new_backout_path %></em>
   </div>
 </center>
 <% if logged_in? %>
 <div class="col-md-4">
-  <h4><%= link_to "Add Backout", new_backout_path %></h4>
+
 </div>
 <% end %>
