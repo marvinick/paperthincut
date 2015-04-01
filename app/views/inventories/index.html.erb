@@ -1,4 +1,3 @@
-
 <h3 class="text-center">Last Month's Inventory</h3>
 <div class="col-md-12">
   <%= column_chart Inventory.group(:name, :amount).count %>

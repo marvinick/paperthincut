@@ -1,15 +1,14 @@
 <center>
+<h3>Backouts</h3>
   <div class="col-md-12">
-    <h4>Backouts:</h4>
+    <%= pie_chart Backout.group(:month, :item1, :amount1, :item2, :amount2, :item3, :amount3).count %>
+    <div class="col-md-12">
     <hr>
       <% @backouts.each do |backout| %>
-      <li><h3><%= link_to backout.month, backout %></h3></li>
+      <li><h4><%= link_to backout.month, backout %></h3></li>
       <% end %>
+      <% if logged_in? %>
       <em><%= link_to "Add Backout", new_backout_path %></em>
+      <% end %>
   </div>
 </center>
-<% if logged_in? %>
-<div class="col-md-4">
-
-</div>
-<% end %>
