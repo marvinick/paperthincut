@@ -4,5 +4,7 @@
   <br/>
   <h4><font color="red"><%= render @request.items %></font></h4>
   <br/>
-  <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if logged_in? %>
+      <%= link_to 'Delete', @request_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>

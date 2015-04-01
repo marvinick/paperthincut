@@ -5,10 +5,9 @@
     <li><%= @good.price %></li>
     <li><%= @good.unit %></li>
     <br/>
-    <%= link_to "Edit", edit_good_path %>
-    <%= link_to 'Delete', good_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if logged_in? %>
+      <%= link_to "Edit", edit_good_path %>
+      <%= link_to 'Delete', good_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </ul>
-</div>
-<div class="span8 well">
-  <%= column_chart Good.group(:created_at).count %>
 </div>

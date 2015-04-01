@@ -1,5 +1,5 @@
 <div class="order">
-  <div class="span3 well">
+  <div class="span4 well">
     <h3><li><%= @distributor.name %></li></h3>
     <li><%= @distributor.description %></li>
     <br/>
@@ -9,10 +9,12 @@
     <% end %>
   </div>
 
-  <div class="span3 well">
+  <div class="span4 well">
     <% @distributor.goods.each do |good| %>
       <h4><li><%= link_to good.name, good_path(good) %></li></h4>
-      <%= button_to "Order", items_path(good_id: good) %>
+      <% if logged_in? %>
+        <%= button_to "Order", items_path(good_id: good) %>
+      <% end %>
       <%= render good.distributors %>
     <% end %>
   </div>

@@ -1,4 +1,6 @@
 <div class="col-md-5">
   <h4><li><%= link_to @inventory.name, edit_inventory_path %></li></h4>
-  <em><%= link_to 'Delete', inventory_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+  <% if logged_in? %>
+    <em><%= link_to 'Delete', inventory_path, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+  <% end %>
 </div>
