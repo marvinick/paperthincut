@@ -3,7 +3,7 @@ class InventoriesController < ApplicationController
   before_action :require_user, except: [:show, :index]
 
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.order(:created_at)
   end
 
   def new
@@ -30,7 +30,7 @@ class InventoriesController < ApplicationController
 
   def update
     if @inventory.update(inventory_params)
-      redirect_to new_inventory_path
+      redirect_to inventories_path
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class InventoriesController < ApplicationController
 
   def destroy
     @inventory.destroy
-    redirect_to new_inventory_path
+    redirect_to inventories_path
   end
 
   private
