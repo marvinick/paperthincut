@@ -1,5 +1,5 @@
 <div class="span5 well">
-  <%= simple_form_for '/login', class: "form-signin" do %>
+  <%= form_for '/login' do |f| %>
   <div class="control-group">
     <%= label_tag :username %>
     <%= text_field_tag :username %>
@@ -11,5 +11,6 @@
     <%= submit_tag 'Login', class: 'btn btn-success' %>
   <% end %>
 </div>
+
 
 
