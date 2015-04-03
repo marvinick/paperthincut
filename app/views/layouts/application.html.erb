@@ -24,7 +24,7 @@
               <% if logged_in? %>
               <%= link_to "sign out", logout_path %>
               <% else %>
-              <%= link_to "sign in", login_path  %>
+              <%= link_to "sign in", new_user_session_path%>
               <% end %>
             </ul>
           </div>
