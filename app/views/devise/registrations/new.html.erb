@@ -2,9 +2,8 @@
 
 <h2 class="text-center">Sign Up</h2>
 <%= f.error_notification %>
-    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Email", input_html: {class: "form-control"} %>
+    <%= f.input :username, required: true, autofocus: true, label: false, placeholder: "username", input_html: {class: "form-control"} %>
     <%= f.input :password, required: true, label: false, placeholder: "password", hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-    <%= f.input :password_confirmation, required: true, label: false, placeholder: "confirm password", input_html: {class: "form-control"} %>
     <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block" %>
     <%= render "devise/shared/links" %>
 <% end %>

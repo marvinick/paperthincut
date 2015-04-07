@@ -5,4 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
     end
   end
+  ActiveRecord::Base.connection.users.each do |t|
+    ActiveRecord::Base.connection.reset_pk_sequence!(t)
+  end
 end

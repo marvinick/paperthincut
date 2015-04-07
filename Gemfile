@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'd3-rails'
+gem 'with_advisory_lock'
 
 group :doc do
   gem 'sdoc', require: false
