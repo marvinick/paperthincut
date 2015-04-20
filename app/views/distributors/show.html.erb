@@ -3,7 +3,7 @@
     <h3><li><%= @distributor.name %></li></h3>
     <li><%= @distributor.description %></li>
     <br/>
-    <% if logged_in? %>
+    <% if current_sucker %>
       <%= link_to "Edit", edit_distributor_path %>
       <%= link_to "Delete", distributor_path, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
@@ -12,7 +12,7 @@
   <div class="span4 well">
     <% @distributor.goods.each do |good| %>
       <h4><li><%= link_to good.name, good_path(good) %></li></h4>
-      <% if logged_in? %>
+      <% if current_sucker %>
         <%= button_to "Order", items_path(good_id: good) %>
       <% end %>
       <%= render good.distributors %>

@@ -1,8 +1,7 @@
 Paperthincut::Application.routes.draw do
-  devise_for :suckers
-  devise_for :members
-  devise_for :users, controllers: { registrations: "registrations" }
-  #devise_for :clients
+  devise_for :suckers do
+    root to: "suckers/sessions#new"
+  end
   root to: "goods#index"
   resources :items
   resources :baskets

@@ -1,6 +1,6 @@
 class DistributorsController < ApplicationController
   before_action :set_distributor, only: [:edit, :update, :show, :destroy]
-  before_action :require_user, except: [:index, :show]
+  before_action :current_sucker, except: [:index, :show]
 
   def index
     @distributors = Distributor.all

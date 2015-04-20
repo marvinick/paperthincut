@@ -30,5 +30,7 @@ Paperthincut::Application.configure do
   config.assets.debug = true
 
   config.assets.precompile = ['static_pages.css']
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
 
 end

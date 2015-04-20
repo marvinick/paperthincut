@@ -5,7 +5,7 @@
     <h4><li><%= link_to distributor.name, distributor %></li></h4>
   <% end %>
   <hr>
-  <% if logged_in? %>
+  <% if current_sucker %>
     <li><%= link_to "Distributor", new_distributor_path(@distributor) %></li>
     <li><%= link_to "Products", new_good_path %></li>
   <% end %>

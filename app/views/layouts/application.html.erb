@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>//paprthin - glance at it!!</title>
+    <title>paprthin - less clutters</title>
       <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application" %>
       <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
@@ -21,10 +21,10 @@
               </li>
             </ul>
             <ul class="pull-right">
-              <% if logged_in? %>
-              <%= link_to "sign out", logout_path %>
+              <% if current_sucker %>
+              <%= link_to "Logout", destroy_sucker_session_path, method: :delete %>
               <% else %>
-              <%= link_to "sign in", login_path%>
+              <%= link_to "Sign in", new_sucker_session_path %>
               <% end %>
             </ul>
           </div>

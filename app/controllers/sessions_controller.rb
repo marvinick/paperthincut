@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+
   def new
   end
 
