@@ -18,10 +18,10 @@
   <%= pie_chart Post.group(:title).count %>
   <p>Updates. News. <strong><%= link_to "Post", posts_path %></strong> them here.</p>
 </div>
-<% if logged_in? %>
+<% if current_sucker %>
   <div class="col-md-4">
     <%= pie_chart Log.group(:event).count %>
-    <p>Something happened? <strong><%= link_to "Log", logs_path %></strong> them here.</p>
+    <p>Something happened? <strong><%= link_to "Log", logs_path %></strong> it here.</p>
   </div>
 <% end %>
 
