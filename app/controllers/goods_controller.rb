@@ -1,6 +1,6 @@
 class GoodsController < ApplicationController
   before_action :set_good, only: [:edit, :update, :show, :destroy]
-  before_action :current_sucker, except: [:index, :show]
+  before_action :authenticate_sucker!, except: [:index, :show]
 
   def index
     @goods = Good.order(:name)
