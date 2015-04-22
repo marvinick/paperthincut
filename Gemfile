@@ -34,6 +34,8 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'd3-rails'
 gem 'with_advisory_lock'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :doc do
   gem 'sdoc', require: false
