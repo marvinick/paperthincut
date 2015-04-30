@@ -10,4 +10,7 @@ class Basket < ActiveRecord::Base
     end
     current_item
   end
+
+  def total_cost
+  end
 end
