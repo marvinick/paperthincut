@@ -7,7 +7,7 @@
       <% @backouts.each do |backout| %>
       <li><h4><%= link_to backout.month, backout %></h3></li>
       <% end %>
-      <% if logged_in? %>
+      <% if current_sucker %>
       <em><%= link_to "Add Backout", new_backout_path %></em>
       <% end %>
   </div>
