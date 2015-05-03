@@ -1,8 +1,8 @@
 <table>
   <tr>
-    <td><%= item.amount %><td>
+    <td><%= item.amount %>&times;<td>
     <td><%= item.good.unit %> -></td>
     <td><%= item.good.name %></td>
-    <td><%= item.request.additional %></td>
+    <td><%= number_to_currency(item.total_price) %></td>
   </tr>
 </table>

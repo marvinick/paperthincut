@@ -7,7 +7,10 @@
   <ul>
     <% @basket.items.each do |item| %>
      <li><%= item.amount %> <%= item.good.unit %> of <%= item.good.name %></li>
+     <li><%= number_to_currency(item.total_price) %></li>
     <% end %>
+    <h4>Total</h4>
+    <li><%= number_to_currency(@basket.total_price) %>
     <br/>
     <li><%= link_to 'Select more', :back %></li>
   </ul>

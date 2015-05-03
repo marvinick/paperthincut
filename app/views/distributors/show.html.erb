@@ -12,6 +12,7 @@
   <div class="span4 well">
     <% @distributor.goods.each do |good| %>
       <h4><li><%= link_to good.name, good_path(good) %></li></h4>
+      <h6><li><%= number_to_currency(good.price) %></li></h6>
       <% if current_sucker %>
         <%= button_to "Order", items_path(good_id: good) %>
       <% end %>
