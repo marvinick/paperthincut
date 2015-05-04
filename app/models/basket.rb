@@ -11,7 +11,7 @@ class Basket < ActiveRecord::Base
     current_item
   end
 
-  def price_total
+  def total_price
     items.to_a.sum { |item| item.total_price }
   end
 end

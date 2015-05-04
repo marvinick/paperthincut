@@ -4,6 +4,10 @@ class Item < ActiveRecord::Base
   belongs_to :request
 
   def total_price
-    good.price * amount
+    if good.price.nil?
+      return 0.0
+    else
+      good.price * amount
+    end
   end
 end

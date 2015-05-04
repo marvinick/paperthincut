@@ -10,7 +10,7 @@
      <li><%= number_to_currency(item.total_price) %></li>
     <% end %>
     <h4>Total</h4>
-    <li><%= number_to_currency(@basket.price_total) %>
+    <li><%= number_to_currency(@basket.total_price) %>
     <br/>
     <li><%= link_to 'Select more', :back %></li>
   </ul>
