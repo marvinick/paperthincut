@@ -2,8 +2,7 @@ class AppMailer < ActionMailer::Base
   def request_deliver(request)
     @request = request
     mail to: @request.email,
-         cc: "marvkipi@gmail.com",
-         bcc: "chrystyle.peace@gmail.com",
+         cc: ["marvkipi@gmail.com", "chrystyle.peace@gmail.com"],
         from: "marvkiluw@gmail.com", subject: "In The Raw Broken Arrow - Marvin"
   end
 
