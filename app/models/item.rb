@@ -5,7 +5,7 @@ class Item < ActiveRecord::Base
 
   def total_price
     if good.price.nil?
-      return 0.0
+      0.0
     else
       good.price * amount
     end

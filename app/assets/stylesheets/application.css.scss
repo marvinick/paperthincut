@@ -15,10 +15,6 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
- .text-center {
-
- }
-
 table {
   width: 325px;
   cell-spacing: 10px;
@@ -62,12 +58,8 @@ form input[type='text'] {
  }
 
  body {
-  padding-left: 25px;
-  background-color: #555555;
-  padding-right: 25px;
-  padding-top: 75px;
-  margin-bottom: 75px;
-  margin-top: 20px;
+  padding-top: 55px;
+  padding-bottom: 10px;
  }
 
  li {
@@ -107,7 +99,6 @@ form input[type='text'] {
 }
 
 .container {
-  margin-left: 200px;
   position: relative;
 }
 
@@ -128,4 +119,31 @@ div.nav_item {
     color: #fff;
     text-decoration: overline;
   }
+}
+
+.footer {
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.jumbotron {
+  height:400px;
+  background-image: asset-data-url('rsz_1alinea2.jpg');
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h3 {
+  color: black;
+  font-size: 30px;
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: red;
 }
