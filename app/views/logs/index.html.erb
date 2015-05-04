@@ -4,7 +4,7 @@
     <li><%= log.name %></li>
     <em><li><%= log.created_at %></li></em>
   <% end %>
-  <% if logged_in? %>
+  <% if current_sucker %>
     <em><%= link_to "New", new_log_path %></em>
   <% end %>
 </div>
