@@ -127,18 +127,19 @@ div.nav_item {
 }
 
 .jumbotron {
-  height:400px;
+  height:350px;
   background-image: asset-data-url('rsz_1alinea2.jpg');
+  width: 100%;
 }
 
 .jumbotron .container {
   position: relative;
   top:100px;
+  width: 100%;
 }
 
 .jumbotron h3 {
   color: black;
-  font-size: 30px;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
