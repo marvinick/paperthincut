@@ -22,9 +22,9 @@
             </ul>
             <ul class="pull-right">
               <% if current_sucker %>
-              <%= link_to "sign out", destroy_sucker_session_path, method: :delete %>
+                <%= link_to "sign out", destroy_sucker_session_path, method: :delete %>
               <% else %>
-              <%= link_to "sign in", new_sucker_session_path %>
+                <%= link_to "sign in", new_sucker_session_path %>
               <% end %>
             </ul>
           </div>

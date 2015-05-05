@@ -58,7 +58,7 @@ form input[type='text'] {
  }
 
  body {
-  padding-top: 55px;
+  padding-top: 70px;
   padding-bottom: 10px;
  }
 
@@ -124,22 +124,7 @@ div.nav_item {
 .footer {
   padding-top: 20px;
   margin-top: 10px;
+  padding-bottom: 2px;
 }
 
-.jumbotron {
-  height:350px;
-  background-image: asset-data-url('rsz_1alinea2.jpg');
-  width: 100%;
-}
 
-.jumbotron .container {
-  position: relative;
-  top:100px;
-  width: 100%;
-}
-
-.jumbotron p {
-  color: black;
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-}

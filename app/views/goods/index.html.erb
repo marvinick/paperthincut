@@ -1,11 +1,17 @@
-<div class="jumbotron">
-    <div class="col-md-12">
-      <p class="text-center">order//backout//inventory</p>
-    </div>
+<div class="col-md-12">
+    <h3 class="text-center">
+      <ul>
+        <li>|| order</li>
+        <li>backout //<li>
+        <li>inventory //</li>
+        <li>|| event </li>
+      <ul>
+    </h3>
 </div>
+<hr>
 <div class="col-md-4">
   <%= line_chart Request.group(:name, :created_at).count %>
-    <p>Only <strong><%= link_to "Order", distributors_path %></strong> from the list of the items that you want. You can also see <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
+    <p><strong>Order <%= link_to "here", distributors_path %></strong>. See <strong><%= link_to "Past Orders", requests_path %></strong>.</p>
 </div>
 <div class="col-md-4">
   <%= pie_chart Backout.group(:month).count %>
