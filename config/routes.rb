@@ -17,6 +17,7 @@ Paperthincut::Application.routes.draw do
   end
   resources :logs
   resources :calendars
+  resources :tips
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

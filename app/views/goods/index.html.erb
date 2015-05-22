@@ -21,6 +21,8 @@
   <%= column_chart Inventory.group(:name, :amount).count %>
   <p>Nobody likes doing <strong><%= link_to "Inventories", inventories_path %></strong>, but someone has to do it.</p>
 </div>
+<div class="col-md-4">
+  <p><%= link_to "Tips", tips_path %></p>
 <% if current_sucker %>
   <div class="col-md-4">
     <%= pie_chart Post.group(:title).count %>

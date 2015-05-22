@@ -1,0 +1,20 @@
+<div id="sticky">
+      <div class="nav">
+        <div class="container">
+          <div class="row">
+            <ul class="pull-left">
+              <li>
+              <%= link_to "//paprthin", root_path %>
+              </li>
+            </ul>
+            <ul class="pull-right">
+              <% if current_sucker %>
+                <%= link_to "sign out", destroy_sucker_session_path, method: :delete %>
+              <% else %>
+                <%= link_to "sign in", new_sucker_session_path %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
