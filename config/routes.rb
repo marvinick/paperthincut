@@ -19,7 +19,6 @@ Paperthincut::Application.routes.draw do
   resources :calendars
   resources :tips
 
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  get 'graph/index'
+  get 'graph/data', :defaults => { :format => 'json' }
 end
