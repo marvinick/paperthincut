@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522030626) do
+ActiveRecord::Schema.define(version: 20150524151413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -246,6 +246,16 @@ ActiveRecord::Schema.define(version: 20150522030626) do
 
   create_table "responds", force: true do |t|
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rolls", force: true do |t|
+    t.integer  "flavor"
+    t.integer  "texture"
+    t.boolean  "gluten"
+    t.integer  "healthy"
+    t.integer  "visual"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

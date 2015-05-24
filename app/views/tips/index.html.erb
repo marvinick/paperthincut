@@ -1,3 +1,5 @@
-<% @tips.each do |tip| %>
-<%= link_to tip.month, tip %>
-<% end %>
+<div class="span5 well">
+  <% @tips.each do |tip| %>
+  <%= link_to tip.month, tip %>
+  <% end %>
+</div>
