@@ -36,6 +36,7 @@ gem 'd3-rails'
 gem 'with_advisory_lock'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'ratyrate'
 
 group :doc do
   gem 'sdoc', require: false

@@ -1,4 +1,5 @@
 Paperthincut::Application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :suckers do
     root to: "suckers/sessions#new"
   end
