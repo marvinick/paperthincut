@@ -1,0 +1,5 @@
+<% @rolls.each do |roll| %>
+<%= link_to roll.name, roll %>
+<% end %>
+
+<h4><%= link_to "Add New Roll", new_roll_path %></h4>

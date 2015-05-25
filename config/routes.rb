@@ -19,6 +19,7 @@ Paperthincut::Application.routes.draw do
   resources :logs
   resources :calendars
   resources :tips
+  resources :rolls
 
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }

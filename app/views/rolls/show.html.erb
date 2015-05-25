@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="small-2 large-2 columns">
+    <%= imdb_style_rating_for @roll, current_sucker %>
+  </div>
+  <br>
+  <div class="small-2 large-4 columns">
+    <% if current_sucker %>
+      Flavor: <%= rating_for @roll, "flavor" %>
+      <br>
+      Texture: <%= rating_for @roll, "texture" %>
+      <br>
+      Healthy: <%= rating_for @roll, "healthy" %>
+      <br>
+      Visual: <%= rating_for @roll, "visual" %>
+    <% end %>
+  </div>
+</div>

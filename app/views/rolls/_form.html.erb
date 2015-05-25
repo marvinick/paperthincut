@@ -1,0 +1,8 @@
+<%= form_for @roll do |f| %>
+  <div class="control-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+  <hr>
+  <%= f.submit "Log it", class: 'btn btn-success' %>
+<% end %>

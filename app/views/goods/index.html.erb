@@ -21,6 +21,10 @@
 </div>
 <div class="col-md-4">
   <p><%= link_to "Tips", tips_path %></p>
+</div>
+<div class="col-md-4">
+  <p><%= link_to "Rolls", rolls_path %></p>
+</div>
 <% if current_sucker %>
   <div class="col-md-4">
     <%= pie_chart Post.group(:title).count %>
