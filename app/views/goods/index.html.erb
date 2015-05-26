@@ -19,11 +19,10 @@
   <%= column_chart Inventory.group(:name, :amount).count %>
   <p>Nobody likes doing <strong><%= link_to "Inventories", inventories_path %></strong>, but someone has to do it.</p>
 </div>
+<hr>
 <div class="col-md-4">
-  <p><%= link_to "Tips", tips_path %></p>
-</div>
-<div class="col-md-4">
-  <p><%= link_to "Rolls", rolls_path %></p>
+  <%= column_chart Inventory.group(:name, :amount).count %>
+  <p><em>Coming soon </em><strong><%= link_to "Rate your plate", rolls_path %></strong></p>
 </div>
 <% if current_sucker %>
   <div class="col-md-4">

@@ -13,6 +13,10 @@ class RollsController < ApplicationController
     redirect_to rolls_path
   end
 
+  def show
+    @roll = Roll.find(params[:id])
+  end
+
   private
 
   def roll_params
